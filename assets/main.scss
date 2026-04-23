@@ -1,0 +1,127 @@
+---
+---
+
+@import "minima";
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap");
+
+:root {
+  --bg: #f4efe4;
+  --paper: #fffdf8;
+  --ink: #151414;
+  --ink-soft: #4b4946;
+  --accent: #0f766e;
+  --accent-2: #b45309;
+  --line: #ddd4c2;
+  --shadow: 0 20px 45px rgba(45, 39, 29, 0.12);
+}
+
+body {
+  font-family: "IBM Plex Serif", Georgia, serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(180, 83, 9, 0.1), transparent 30%),
+    radial-gradient(circle at 85% 0%, rgba(15, 118, 110, 0.12), transparent 26%),
+    linear-gradient(180deg, #f7f2e7 0%, #f1eadb 100%);
+}
+
+.site-header {
+  border-top: 10px solid var(--accent);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 253, 248, 0.92);
+  backdrop-filter: blur(6px);
+}
+
+.site-title,
+.site-nav .page-link,
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+}
+
+.site-title {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.page-content {
+  padding-top: 2.2rem;
+}
+
+.wrapper {
+  max-width: 980px;
+}
+
+.post-content,
+.page-content .wrapper {
+  animation: rise-in 0.55s ease-out;
+}
+
+@keyframes rise-in {
+  from {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.hero-panel {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 8px solid var(--accent-2);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.7rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.quick-grid a {
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+  color: var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.quick-grid a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(33, 28, 24, 0.1);
+  border-color: #bca474;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: #0d5f58;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: #efe7d8;
+}
+
+@media (max-width: 600px) {
+  .hero-panel {
+    padding: 1rem;
+  }
+
+  .site-title {
+    font-size: 1.1rem;
+  }
+}

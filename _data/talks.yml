@@ -1,0 +1,363 @@
+- date_sort: 2024-04
+  year: 2024
+  month: April
+  speaker: Jun Takahashi
+  type: Oral
+  event: IV-INCT-FNA Symposium
+  location: UFF, Niteroi, Brazil
+  title: High energy nuclear collisions, overview and future perspectives
+
+- date_sort: 2023-09
+  year: 2023
+  month: September
+  speaker: Willian Matioli Serenone
+  type: Oral
+  event: Quark Matter 2023
+  location: Houston, USA
+  title: QGP vortex rings as a new probe for jet-induced medium response and longitudinal dynamics
+  url: https://indico.cern.ch/event/1139644/contributions/5453466/
+
+- date_sort: 2023-09
+  year: 2023
+  month: September
+  speaker: T. Nunes da Silva
+  type: Oral
+  event: III Encontro de Primavera da SBF
+  location: UFF, Niteroi, Brazil
+  title: Causality Violations in Hybrid Simulations of Large and Small Systems
+  url: https://sec.sbfisica.org.br/eventos/epsbf/iii/sys/resumos/R0343-1.pdf
+
+- date_sort: 2023-09
+  year: 2023
+  month: September
+  speaker: Eduardo Oliveira Pinho
+  type: Oral
+  event: III Encontro de Primavera da SBF
+  location: UFF, Niteroi, Brazil
+  title: A non-conformal pre-equilibrium dynamics model for heavy-ion collisions
+  url: https://sec.sbfisica.org.br/eventos/epsbf/iii/sys/resumos/R0250-1.pdf
+
+- date_sort: 2023-09
+  year: 2023
+  month: September
+  speaker: Cicero Domenico Muncinelli
+  type: Poster
+  event: III Encontro de Primavera da SBF
+  location: UFF, Niteroi, Brazil
+  title: Decomposition of heavy-ion transverse momentum spectra using Laguerre polynomials
+  url: https://sec.sbfisica.org.br/eventos/epsbf/iii/sys/resumos/R0346-1.pdf
+
+- date_sort: 2023-09
+  year: 2023
+  month: September
+  speaker: Jun Takahashi
+  type: Oral
+  event: III Encontro de Primavera da SBF
+  location: UFF, Niteroi, Brazil
+  title: High Energy Heavy Ion Nuclear Collisions, extreme matter for extreme collaborations
+  url: https://sec.sbfisica.org.br/eventos/epsbf/iii/sys/resumos/R0395-1.pdf
+
+- date_sort: 2023-06
+  year: 2023
+  month: June
+  speaker: Jun Takahashi
+  type: Oral
+  event: Reuniao de Trabalho sobre Interacoes Hadronicas
+  location: CBPF, Rio de Janeiro, Brazil
+  title: Do NexSPheRIO ao EXTREME, o sucesso das flutuacoes, turbulencias e parcerias
+
+- date_sort: 2023-05
+  year: 2023
+  month: May
+  speaker: Jun Takahashi
+  type: Oral
+  event: POETIC 2023
+  location: ICTP-SAIFR, Sao Paulo, Brazil
+  title: EXTREME Collaboration, a full hybrid model to simulate high energy heavy ion nuclear collisions
+  url: https://www.ictp-saifr.org/poetic2023/
+
+- date_sort: 2022-09
+  year: 2022
+  month: September
+  speaker: Vitor Hugo Ribeiro
+  type: Oral
+  event: XLII Encontro Nacional de Fisica de Particulas
+  location: Brazil
+  title: Jet thermalization through vortex formation in the quark-gluon plasma
+
+- date_sort: 2022-09
+  year: 2022
+  month: September
+  speaker: Tiago Nunes
+  type: Oral
+  event: XLII Encontro Nacional de Fisica de Particulas
+  location: Brazil
+  title: Evolving hybrid descriptions of the quark-gluon plasma in heavy-ion collisions
+
+- date_sort: 2022-09
+  year: 2022
+  month: September
+  speaker: Gabriel S. Denicol
+  type: Oral
+  event: XLII Encontro Nacional de Fisica de Particulas
+  location: Brazil
+  title: Nuclear matter under extreme conditions
+
+- date_sort: 2022-07
+  year: 2022
+  month: July
+  speaker: Jorge Noronha
+  type: Invited
+  event: DRCC Seminar
+  location: Unicamp, Brazil
+  title: Relativistic Fluid Dynamics: From Particle Colliders to Neutron Star Mergers
+  url: https://portal.ifi.unicamp.br/seminarios-do-drcc.
+
+- date_sort: 2022-06
+  year: 2022
+  month: June
+  speaker: Jorge Noronha
+  type: Invited
+  event: Goethe University Colloquium
+  location: Frankfurt, Germany
+  title: Relativistic Fluid Dynamics: From Particle Colliders to Neutron Star Mergers
+  url: https://www.uni-frankfurt.de/123662448.pdf
+
+- date_sort: 2022-06
+  year: 2022
+  month: June
+  speaker: A. M. S. N. Ferreira
+  type: Oral
+  event: FunQCD22
+  location: Valencia, Spain
+  title: Evidence of the Schwinger-Mechanism in QCD
+  url: https://drive.google.com/file/d/1NUstgbmw3cFalAKir70aLI9xbYeGbvSn/view
+
+- date_sort: 2022-06
+  year: 2022
+  month: June
+  speaker: Matthew Luzum
+  type: Invited
+  event: Strong and Electro-Weak Matter 2022
+  location: Paris, France
+  title: Recent progress in hydrodynamics for heavy-ion collisions
+  url: https://indico.in2p3.fr/event/26461/
+
+- date_sort: 2022-05
+  year: 2022
+  month: May
+  speaker: A. M. S. N. Ferreira
+  type: Oral
+  event: AMBER at CERN VII
+  location: CERN
+  title: Massless bound states in the gauge sector of QCD
+  url: https://indico.cern.ch/event/1145356/contributions/4850058/attachments/2443291/4186183/Amber%20VII%20-%20M.%20N.%20Ferreira.pdf
+
+- date_sort: 2022-05
+  year: 2022
+  month: May
+  speaker: Jorge Noronha
+  type: Invited
+  event: Frankfurt Hydrodynamics Seminar
+  location: Frankfurt, Germany
+  title: Transient Relativistic Fluid Dynamics in a General Hydrodynamic Frame
+  url: https://www.uni-frankfurt.de/65315388/Arbeitsgruppe_Dirk_Rischke
+
+- date_sort: 2022-05
+  year: 2022
+  month: May
+  speaker: Jorge Noronha
+  type: Invited
+  event: High Energy Theory Seminar at LBNL
+  location: Berkeley, USA
+  title: Hydrodynamic Frames: The Good, The Bad, and The Ugly
+  url: https://hit.lbl.gov/#h.b0au40taajc6
+
+- date_sort: 2022-05
+  year: 2022
+  month: May
+  speaker: Matthew Luzum
+  type: Invited
+  event: EMMI RRTF
+  location: Heidelberg, Germany
+  title: Modeling nuclei across energy scales: Glauber Monte Carlo approach in heavy-ion collisions
+  url: https://indico.gsi.de/event/14430/
+
+- date_sort: 2022-04
+  year: 2022
+  month: April
+  speaker: A. V. Giannini
+  type: Poster
+  event: Quark Matter 2022
+  location: Krakow, Poland
+  title: Assessing the ultra-central flow puzzle in the Bayesian era
+  url: https://indico.cern.ch/event/895086/contributions/4712297/
+
+- date_sort: 2022-04
+  year: 2022
+  month: April
+  speaker: A. M. S. N. Ferreira
+  type: Poster
+  event: Quark Matter 2022
+  location: Krakow, Poland
+  title: Pre-hydrodynamical effects in large and small systems
+  url: https://indico.cern.ch/event/895086/contributions/4710988/attachments/2420700/4143419/QM2022%20-%20Mauricio%20N.%20Ferreira%20-%20v3.pdf
+
+- date_sort: 2021-12
+  year: 2021
+  month: December
+  speaker: Jorge Noronha
+  type: Invited
+  event: Nuclear Theory Seminar, BNL
+  location: New York, USA
+  title: Hydrodynamic Frames: The Good, The Bad, and The Ugly
+  url: https://indico.bnl.gov/category/228/
+
+- date_sort: 2021-11
+  year: 2021
+  month: November
+  speaker: Jorge Noronha
+  type: Invited
+  event: RHIC-BES Online Seminars
+  location: Online
+  title: Hot and dense quark-gluon plasma from black hole engineering
+  url: https://indico.ihep.ac.cn/event/14723/
+
+- date_sort: 2021-05
+  year: 2021
+  month: May
+  speaker: David D. Chinellato
+  type: Oral
+  event: SQM 2021
+  location: Online
+  title: Charm and multi-strange baryon measurements via strangeness tracking in the upgraded ALICE detectors
+  url: https://indico.cern.ch/event/985652/contributions/4305118/
+
+- date_sort: 2021-05
+  year: 2021
+  month: May
+  speaker: Willian M. Serenone
+  type: Invited
+  event: Theory of Hadronic Matter under Extreme Conditions
+  location: Dubna, Russia
+  title: Lambda polarization from thermalized jet energy
+  url: http://theor.jinr.ru/~klopot/seminarTHMUEC.html
+
+- date_sort: 2021-05
+  year: 2021
+  month: May
+  speaker: Willian M. Serenone
+  type: Oral
+  event: Workshop on QGP Phenomenology
+  location: Tehran, Iran
+  title: Lambda polarization from the thermalized jet energy and momentum
+  url: https://indico.cern.ch/event/1021608/contributions/4294780/
+
+- date_sort: 2021-03
+  year: 2021
+  month: March
+  speaker: Tiago Nunes
+  type: Oral
+  event: ExTrEMe Hydro Workshop
+  location: Sao Paulo, Brazil
+  title: Initial conditions for hydrodynamics with Trento and Kompost
+
+- date_sort: 2021-01
+  year: 2021
+  month: January
+  speaker: Tiago Nunes
+  type: Oral
+  event: Initial Stages 2021
+  location: Online
+  title: Pre-hydrodynamic evolution and conformal symmetry in small systems
+  url: https://indico.cern.ch/event/854124/contributions/4145541/
+
+- date_sort: 2021-01
+  year: 2021
+  month: January
+  speaker: Mauricio Hippert
+  type: Oral
+  event: Initial Stages 2021
+  location: Online
+  title: Fixing the nuclear charge density with finite nucleons
+  url: https://indico.cern.ch/event/854124/contributions/4152883/
+
+- date_sort: 2021-01
+  year: 2021
+  month: January
+  speaker: Gabriel S. Denicol
+  type: Invited Plenary
+  event: Initial Stages 2021
+  location: Online
+  title: Charge Conservation in Initial Conditions and Hydrodynamics
+  url: https://indico.cern.ch/event/854124/contributions/4136902/
+
+- date_sort: 2020-12
+  year: 2020
+  month: December
+  speaker: Matthew Luzum
+  type: Invited
+  event: IF-USP Colloquium
+  location: Sao Paulo, Brazil
+  title: Hot Quark Soup: Thermodynamics of Hot Strong-Interaction Matter from Ultrarelativistic Nuclear Collisions
+  url: http://portal.if.usp.br/pesquisa/pt-br/node/2030
+
+- date_sort: 2020-10
+  year: 2020
+  month: October
+  speaker: Matthew Luzum
+  type: Invited
+  event: Ohio State University Seminar
+  location: Columbus, USA
+  title: Probing the initial state of heavy-ion collisions with pT-dependent flow fluctuations
+  url: https://physics.osu.edu/events/nuclear-physics-seminar-matthew-luzum-university-sao-paulo-brazil-probing-initial-state
+
+- date_sort: 2019-11
+  year: 2019
+  month: November
+  speaker: Mauricio Hippert
+  type: Oral
+  event: Quark Matter 2019
+  location: Wuhan, China
+  title: Momentum-dependent flow fluctuations as a hydrodynamic response to initial geometry
+  url: https://indico.cern.ch/event/792436/contributions/3535654/
+
+- date_sort: 2019-11
+  year: 2019
+  month: November
+  speaker: Tiago Nunes
+  type: Oral
+  event: Quark Matter 2019
+  location: Wuhan, China
+  title: Pre-hydrodynamic evolution and its signatures in final-state observables
+  url: https://indico.cern.ch/event/792436/contributions/3549057/
+
+- date_sort: 2019-07
+  year: 2019
+  month: July
+  speaker: Mauricio Hippert
+  type: Oral
+  event: Initial Stages 2019
+  location: New York, USA
+  title: Flash talk
+  url: https://sites.ifi.unicamp.br/extreme/files/2019/09/2019_Hippert_InitialStages_flashtalk.pdf
+
+- date_sort: 2019-07
+  year: 2019
+  month: July
+  speaker: Jorge Noronha
+  type: Oral
+  event: Initial Stages 2019
+  location: New York, USA
+  title: Talk contribution
+  url: https://indico.bnl.gov/event/5391/contributions/29231/
+
+- date_sort: 2018-09
+  year: 2018
+  month: September
+  speaker: Tiago Nunes
+  type: Oral
+  event: Hot Quarks 2018
+  location: Texel, Netherlands
+  title: Conference presentation
+  url: https://sites.ifi.unicamp.br/hadrex/files/2019/03/HQ2018_slides.pdf

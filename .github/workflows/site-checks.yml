@@ -1,0 +1,41 @@
+name: Site Checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  jekyll-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check links in markdown
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --verbose
+            --exclude-mail
+            --accept 200,206,301,302,307,308,403,429
+            --max-retries 2
+            --timeout 20
+            ./**/*.md
+          fail: true
