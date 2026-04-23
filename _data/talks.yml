@@ -110,8 +110,8 @@
   type: Invited
   event: DRCC Seminar
   location: Unicamp, Brazil
-  title: Relativistic Fluid Dynamics: From Particle Colliders to Neutron Star Mergers
-  url: https://portal.ifi.unicamp.br/seminarios-do-drcc.
+  title: "Relativistic Fluid Dynamics: From Particle Colliders to Neutron Star Mergers"
+  url: https://portal.ifi.unicamp.br/seminarios-do-drcc
 
 - date_sort: 2022-06
   year: 2022
@@ -120,7 +120,7 @@
   type: Invited
   event: Goethe University Colloquium
   location: Frankfurt, Germany
-  title: Relativistic Fluid Dynamics: From Particle Colliders to Neutron Star Mergers
+  title: "Relativistic Fluid Dynamics: From Particle Colliders to Neutron Star Mergers"
   url: https://www.uni-frankfurt.de/123662448.pdf
 
 - date_sort: 2022-06
@@ -170,7 +170,7 @@
   type: Invited
   event: High Energy Theory Seminar at LBNL
   location: Berkeley, USA
-  title: Hydrodynamic Frames: The Good, The Bad, and The Ugly
+  title: "Hydrodynamic Frames: The Good, The Bad, and The Ugly"
   url: https://hit.lbl.gov/#h.b0au40taajc6
 
 - date_sort: 2022-05
@@ -180,7 +180,7 @@
   type: Invited
   event: EMMI RRTF
   location: Heidelberg, Germany
-  title: Modeling nuclei across energy scales: Glauber Monte Carlo approach in heavy-ion collisions
+  title: "Modeling nuclei across energy scales: Glauber Monte Carlo approach in heavy-ion collisions"
   url: https://indico.gsi.de/event/14430/
 
 - date_sort: 2022-04
@@ -210,7 +210,7 @@
   type: Invited
   event: Nuclear Theory Seminar, BNL
   location: New York, USA
-  title: Hydrodynamic Frames: The Good, The Bad, and The Ugly
+  title: "Hydrodynamic Frames: The Good, The Bad, and The Ugly"
   url: https://indico.bnl.gov/category/228/
 
 - date_sort: 2021-11
@@ -299,7 +299,7 @@
   type: Invited
   event: IF-USP Colloquium
   location: Sao Paulo, Brazil
-  title: Hot Quark Soup: Thermodynamics of Hot Strong-Interaction Matter from Ultrarelativistic Nuclear Collisions
+  title: "Hot Quark Soup: Thermodynamics of Hot Strong-Interaction Matter from Ultrarelativistic Nuclear Collisions"
   url: http://portal.if.usp.br/pesquisa/pt-br/node/2030
 
 - date_sort: 2020-10

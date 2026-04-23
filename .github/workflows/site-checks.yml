@@ -33,7 +33,6 @@ jobs:
         with:
           args: >-
             --verbose
-            --exclude-mail
             --accept 200,206,301,302,307,308,403,429
             --max-retries 2
             --timeout 20
