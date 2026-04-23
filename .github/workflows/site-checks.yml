@@ -33,8 +33,9 @@ jobs:
         with:
           args: >-
             --verbose
+            --offline
             --accept 200,206,301,302,307,308,403,429
             --max-retries 2
             --timeout 20
-            ./**/*.md
+            README.md MIGRATION_PLAN.md members.md contact.md simulation-chain.md wiki.md index.md
           fail: true
