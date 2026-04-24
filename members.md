@@ -29,7 +29,7 @@ permalink: /members/
 ### Students
 
 - Giuliano Dias - PhD, USP, Brazil
-- Thiago Dominguqes - PhD, USP, Brazil
+- [Thiago S. Domingues](http://lattes.cnpq.br/4092459866318436) - PhD, USP, Brazil
 - [Cicero D. Muncinelli](http://lattes.cnpq.br/8192066238557675) - PhD, Unicamp, Brazil
 - Eduardo - PhD, UFSC, Brazil
 
