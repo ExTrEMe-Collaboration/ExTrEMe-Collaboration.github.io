@@ -22,7 +22,6 @@ The <strong>Ex</strong>periment and <strong>T</strong>heo<strong>r</strong>y in 
 <div class="quick-grid">
 <a href="/members/">Members</a>
 <a href="/publications/">Publications</a>
-<a href="/simulation-chain/">Simulation Chain</a>
 <a href="/presentations/">Presentations and Talks</a>
 <a href="/wiki/">Wiki</a>
 <a href="/contact/">Contact</a>
