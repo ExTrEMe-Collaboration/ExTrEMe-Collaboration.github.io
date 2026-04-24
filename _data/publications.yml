@@ -51,6 +51,17 @@
       venue: Phys.Rev.C 112 (2025) 6
       doi: 10.1103/2yqq-qfwd
       arxiv: 2406.15208 
+    - year: 2025
+      title: Probing the onset of collectivity via scaled particle spectra in ultrarelativistic nuclear collisions
+      authors: T. S. Domingues et al. (The ExTrEMe Collaboration)
+      venue: Quark Matter 2025 proceedings
+      doi: 10.1051/epjconf/202636404011
+      arxiv: 2508.21176 
+    - year: 2026
+      title: The shape of transverse momentum spectra in hybrid hydrodynamic models
+      authors: T. S. Domingues et al. (The ExTrEMe Collaboration)
+      venue: Under review
+      arxiv: 2602.22490
 
 - category: Pythia and Angantyr Studies
   items:
