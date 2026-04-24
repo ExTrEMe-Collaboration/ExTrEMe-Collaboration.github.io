@@ -69,6 +69,11 @@
     authors: T. S. Domingues et al. (The ExTrEMe Collaboration)
     venue: Under review
     arxiv: '2602.22490'
+  - year: 2026
+    title: Scaled transverse-momentum spectra as a probe of collective dynamics in heavy-ion collisions
+    authors: T. S. Domingues and Matthew Luzum for the ExTrEMe Collaboration
+    venue: Advances in QCD at the LHC and the EIC 2025 proceedings
+    arxiv: '2603.15891'
 - category: Pythia and Angantyr Studies
   items:
   - year: 2018
