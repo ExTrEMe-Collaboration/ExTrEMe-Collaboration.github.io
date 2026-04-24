@@ -17,7 +17,7 @@ This page is rendered from `/_data/publications.yml`.
   
   Venue: {{ paper.venue }}
   
-  {% if paper.doi %}DOI/Link: [{{ paper.doi }}]({{ paper.doi }}){% endif %}{% if paper.arxiv %}{% if paper.doi %} | {% endif %}arXiv: [{{ paper.arxiv }}]({{ paper.arxiv }}){% endif %}
+  {% if paper.doi %}[doi:{{ paper.doi }}](https://doi.org/{{ paper.doi }}){% endif %}{% if paper.arxiv %}{% if paper.doi %} \| {% endif %}[arXiv:{{ paper.arxiv }}](https://arxiv.org/abs/{{ paper.arxiv }}){% endif %}{% if paper.url %}{% if paper.doi or paper.arxiv %} \| {% endif %}[Repository]({{ paper.url }}){% endif %}
 {% endfor %}
 
 {% endfor %}
@@ -29,5 +29,6 @@ This page is rendered from `/_data/publications.yml`.
 ## Maintenance
 
 - Add new entries by editing `/_data/publications.yml`
-- Keep links in DOI URL format when available
-- Use the same schema for all categories
+- `doi`: store just the DOI identifier (e.g., `10.1103/PhysRevC.102.064909`); URL is built automatically
+- `arxiv`: store just the arXiv ID (e.g., `2311.02210`); URL is built automatically
+- `url`: use for non-DOI links (e.g., thesis repositories)
