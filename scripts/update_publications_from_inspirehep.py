@@ -108,6 +108,17 @@ def save_yaml(data):
     """Save updated publications.yml."""
     with open(YAML_PATH, "w") as f:
         yaml.dump(data, f, sort_keys=False, allow_unicode=True, default_flow_style=False)
+    
+    # Post-process to quote arXiv IDs (YAML will parse numeric-looking IDs as floats)
+    with open(YAML_PATH, "r") as f:
+        content = f.read()
+    
+    import re
+    # Quote any unquoted arXiv numbers
+    content = re.sub(r"(arxiv:\s+)([0-9]{4}\.[0-9]+)(\s|$)", r"\1'\2'\3", content)
+    
+    with open(YAML_PATH, "w") as f:
+        f.write(content)
 
 def find_entry_by_arxiv(yaml_data, arxiv_id):
     """Find an existing entry by arXiv ID in the YAML structure."""

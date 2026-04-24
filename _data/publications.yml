@@ -10,13 +10,13 @@
     authors: M. Hippert et al.
     venue: Phys. Rev. C 101, 034903
     doi: 10.1103/PhysRevC.101.034903
-    arxiv: 1906.08915
+    arxiv: '1906.08915'
   - year: 2020
     title: Momentum-dependent flow fluctuations as a hydrodynamic response to initial
       geometry
     authors: M. Hippert et al.
     venue: Quark Matter 2019 proceedings
-    arxiv: 2003.01147
+    arxiv: '2003.01147'
     doi: 10.1016/j.nuclphysa.2020.121982
   - year: 2020
     title: Probing the structure of the initial state of heavy-ion collisions with
@@ -30,45 +30,45 @@
     authors: T. N. da Silva et al.
     venue: Phys. Rev. C 103, 054906
     doi: 10.1103/PhysRevC.103.054906
-    arxiv: 2006.02324
+    arxiv: '2006.02324'
   - year: 2023
     title: Pre-hydrodynamic evolution in large and small systems
     authors: T. N. da Silva et al. (The ExTrEMe Collaboration)
     venue: Phys. Rev. C 107, 044901
     doi: 10.1103/PhysRevC.107.044901
-    arxiv: 2211.10561
+    arxiv: '2211.10561'
   - year: 2023
     title: Assessing the ultracentral flow puzzle in hydrodynamic modeling of heavy-ion
       collisions
     authors: A. V. Giannini et al. (The ExTrEMe Collaboration)
     venue: Phys. Rev. C 107, 044907
     doi: 10.1103/PhysRevC.107.044907
-    arxiv: 2203.17011
+    arxiv: '2203.17011'
   - year: 2024
     title: Causality violations in simulations of large and small heavy-ion collisions
     authors: R. Krupczak et al. (The ExTrEMe Collaboration)
     venue: Phys. Rev. C 109, 034908
     doi: 10.1103/PhysRevC.109.034908
-    arxiv: 2311.0221
+    arxiv: '2311.02210'
   - year: 2025
     title: Universality of scaled particle spectra in ultrarelativistic heavy-ion
       collisions
     authors: C. D. Muncinelli et al. (The ExTrEMe Collaboration)
     venue: Phys.Rev.C 112 (2025) 6
     doi: 10.1103/2yqq-qfwd
-    arxiv: 2406.15208
+    arxiv: '2406.15208'
   - year: 2025
     title: Probing the onset of collectivity via scaled particle spectra in ultrarelativistic
       nuclear collisions
     authors: T. S. Domingues et al. (The ExTrEMe Collaboration)
     venue: Quark Matter 2025 proceedings
     doi: 10.1051/epjconf/202636404011
-    arxiv: 2508.21176
+    arxiv: '2508.21176'
   - year: 2026
     title: The shape of transverse momentum spectra in hybrid hydrodynamic models
     authors: T. S. Domingues et al. (The ExTrEMe Collaboration)
     venue: Under review
-    arxiv: 2602.2249
+    arxiv: '2602.22490'
   - year: 2024
     title: Causality violations in simulations of large and small heavy-ion collisions
     authors: Krupczak, Renata et al.
@@ -82,20 +82,20 @@
     authors: R. Acconcia et al.
     venue: Phys. Rev. D 97, 036010
     doi: 10.1103/PhysRevD.97.036010
-    arxiv: 1707.02075
+    arxiv: '1707.02075'
   - year: 2019
     title: Studying the effect of the hadronic phase in nuclear collisions with PYTHIA
       and UrQMD
     authors: A. V. da Silva et al.
     venue: SQM 2019 proceedings
-    arxiv: 1911.12824
+    arxiv: '1911.12824'
     doi: 10.1007/978-3-030-53448-6_50
   - year: 2020
     title: Suppression of the nuclear modification factor with a hybrid model based
       on perturbative QCD and hadronic rescattering
     authors: A. V. da Silva et al.
     venue: Preprint
-    arxiv: 2002.10236
+    arxiv: '2002.10236'
 - category: 3C Collaboration and Vorticity
   items:
   - year: 2021
@@ -103,19 +103,19 @@
     authors: W. M. Serenone et al.
     venue: Phys. Lett. B 820, 136500
     doi: 10.1016/j.physletb.2021.136500
-    arxiv: 2102.11919
+    arxiv: '2102.11919'
   - year: 2021
     title: Vortex rings from high energy central p+A collisions
     authors: M. A. Lisa et al.
     venue: Phys. Rev. C 104, L011901
     doi: 10.1103/PhysRevC.104.L011901
-    arxiv: 2101.10872
+    arxiv: '2101.10872'
   - year: 2024
     title: Lambda polarization from vortex rings as the medium response for jet thermalization
     authors: V. H. Ribeiro et al.
     venue: Phys. Rev. C 109, 014905
     doi: 10.1103/PhysRevC.109.014905
-    arxiv: 2305.02428
+    arxiv: '2305.02428'
 - category: Selected Related Theory Papers
   items:
   - year: 2018
@@ -124,19 +124,19 @@
     authors: G. S. Denicol and J. Noronha
     venue: Phys. Rev. D 97, 056021
     doi: 10.1103/PhysRevD.97.056021
-    arxiv: 1711.01657
+    arxiv: '1711.01657'
   - year: 2018
     title: Anisotropic nonequilibrium hydrodynamic attractor
     authors: M. Strickland, J. Noronha, G. S. Denicol
     venue: Phys. Rev. D 97, 036020
     doi: 10.1103/PhysRevD.97.036020
-    arxiv: 1709.06644
+    arxiv: '1709.06644'
   - year: 2019
     title: Causality of the Einstein-Israel-Stewart theory with bulk viscosity
     authors: F. S. Bemfica, M. M. Disconzi, J. Noronha
     venue: Phys. Rev. Lett. 122, 221602
     doi: 10.1103/PhysRevLett.122.221602
-    arxiv: 1901.06701
+    arxiv: '1901.06701'
   - year: 2020
     title: Exact hydrodynamic attractor of an ultrarelativistic gas of hard spheres
     authors: G. S. Denicol and J. Noronha
@@ -150,26 +150,26 @@
     authors: R. D. de Souza et al.
     venue: Phys. Rev. C 85, 054909
     doi: 10.1103/PhysRevC.85.054909
-    arxiv: 1110.5698
+    arxiv: '1110.5698'
   - year: 2012
     title: Coarse graining scale and effectiveness of hydrodynamic modeling
     authors: Ph. Mota et al.
     venue: EPJ A 48, 165
     doi: 10.1140/epja/i2012-12165-7
-    arxiv: 1210.3129
+    arxiv: '1210.3129'
   - year: 2011
     title: Longitudinal dependence of two-particle momentum correlations from NEXSPHERIO
       model
     authors: M. Sharma et al.
     venue: Phys. Rev. C 84, 054915
     doi: 10.1103/PhysRevC.84.054915
-    arxiv: 1107.3587
+    arxiv: '1107.3587'
   - year: 2009
     title: Topology studies of hydrodynamics using two-particle correlation analysis
     authors: J. Takahashi et al.
     venue: Phys. Rev. Lett. 103, 242301
     doi: 10.1103/PhysRevLett.103.242301
-    arxiv: 902.487
+    arxiv: '0902.4870'
 - category: Theses
   items:
   - year: 2023
