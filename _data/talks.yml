@@ -1,3 +1,33 @@
+- date_sort: 2025-11
+  year: 2025
+  month: November 
+  speaker: Thiago S. Domingues
+  type: Oral
+  event: Advances in QCD at the LHC and the EIC
+  location: CBPF, Rio de Janeiro, Brazil
+  title: Exploring the universality of scaled particle spectra with Bayesian inference in heavy-ion collisions
+  url: https://indico.cern.ch/event/1450037/contributions/6728882/
+
+- date_sort: 2025-10
+  year: 2025
+  month: October
+  speaker: Thiago S. Domingues
+  type: Oral
+  event: XXXII Reunião de Trabalho sobre Interações Hadrônicas (RETINHA)
+  location: CBPF, Rio de Janeiro, Brazil
+  title: Exploring the universality of scaled particle spectra with Bayesian inference in heavy-ion collisions
+  url: https://github.com/ThiagoSDomingues/Universality_Github/blob/main/presentations/RETINHA_32.pdf
+
+- date_sort: 2025-04
+  year: 2025
+  month: April
+  speaker: Fernando Gardim
+  type: Oral
+  event: Quark Matter 2025
+  location: Goethe University Frankfurt, Frankfurt am Main, Germany
+  title: Universality of scaled particle spectra in ultrarelativistic heavy-ion collisions
+  url: https://indico.cern.ch/event/1334113/contributions/6289803/attachments/3048306/5386792/Gardim_QM_25.pdf
+
 - date_sort: 2024-04
   year: 2024
   month: April
