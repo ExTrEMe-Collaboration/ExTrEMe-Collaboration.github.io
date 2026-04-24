@@ -9,10 +9,13 @@ The <strong>Ex</strong>periment and <strong>T</strong>heo<strong>r</strong>y in 
 
 ## Research Scope
 
+- Phenomenology and model-to-data comparisons
 - Initial conditions and pre-equilibrium dynamics
 - Relativistic hydrodynamics and transport
+- Nuclear structure
 - Soft and hard probes in QGP
-- Hybrid simulation frameworks and uncertainty quantification
+- Hybrid simulation frameworks
+- Bayesian inference, emulation, and related statistical methods
 
 ## Collaboration Links
 
