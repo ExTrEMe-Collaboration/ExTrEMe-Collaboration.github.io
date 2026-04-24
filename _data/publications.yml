@@ -45,6 +45,12 @@
       venue: Phys. Rev. C 109, 034908
       doi: 10.1103/PhysRevC.109.034908
       arxiv: 2311.02210
+    - year: 2025
+      title: Universality of scaled particle spectra in ultrarelativistic heavy-ion collisions
+      authors: C. D. Muncinelli et al. (The ExTrEMe Collaboration)
+      venue: Phys.Rev.C 112 (2025) 6
+      doi: 10.1103/2yqq-qfwd
+      arxiv: 2406.15208 
 
 - category: Pythia and Angantyr Studies
   items:
