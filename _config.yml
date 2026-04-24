@@ -10,7 +10,6 @@ plugins:
 header_pages:
   - members.md
   - publications.md
-  - simulation-chain.md
   - presentations.md
   - wiki.md
   - contact.md
