@@ -5,6 +5,7 @@ Update publications.yml from INSPIREHEP API.
 Usage:
   python update_publications_from_inspirehep.py                    # Search by collaboration:"extreme"
   python update_publications_from_inspirehep.py --arxiv 2311.02210  # Search by arXiv ID
+  python update_publications_from_inspirehep.py --update-missing-dois  # Fill in missing DOIs
   python update_publications_from_inspirehep.py --dry-run           # Preview changes without writing
 """
 
@@ -178,6 +179,61 @@ def update_publications(hits, dry_run=False):
     else:
         print(f"\n(dry-run: no changes written)", file=sys.stderr)
 
+def update_missing_dois(dry_run=False):
+    """Find all entries with arXiv but missing DOI, and fetch DOI from INSPIREHEP."""
+    yaml_data = load_yaml()
+    
+    missing_dois = []
+    updated = []
+    
+    for category in yaml_data:
+        for item in category.get("items", []):
+            arxiv_id = item.get("arxiv")
+            has_doi = item.get("doi")
+            
+            # Find entries with arXiv but no DOI
+            if arxiv_id and not has_doi:
+                missing_dois.append((str(arxiv_id), category, item))
+    
+    if not missing_dois:
+        print(f"\n✓ All entries have DOIs!", file=sys.stderr)
+        return
+    
+    print(f"\n🔍 Found {len(missing_dois)} entries with arXiv but missing DOI", file=sys.stderr)
+    
+    for arxiv_id, category, item in missing_dois:
+        # Query INSPIREHEP for this arXiv
+        hits = fetch_inspire(f"arxiv:{arxiv_id}")
+        if hits:
+            record = hits[0]
+            metadata = record.get("metadata", {})
+            
+            # Extract DOI
+            if "dois" in metadata and metadata["dois"]:
+                doi = metadata["dois"][0].get("value")
+                if doi:
+                    old_item = dict(item)
+                    item["doi"] = doi
+                    updated.append((arxiv_id, old_item, item))
+                    print(f"  ✓ {arxiv_id}: Found DOI {doi}", file=sys.stderr)
+                else:
+                    print(f"  ✗ {arxiv_id}: No DOI in INSPIREHEP record", file=sys.stderr)
+            else:
+                print(f"  ✗ {arxiv_id}: No DOI in INSPIREHEP record", file=sys.stderr)
+        else:
+            print(f"  ✗ {arxiv_id}: Not found in INSPIREHEP", file=sys.stderr)
+    
+    # Report changes
+    if updated:
+        print(f"\n✏️  Updated {len(updated)} entries with missing DOI", file=sys.stderr)
+    
+    # Write back
+    if updated and not dry_run:
+        save_yaml(yaml_data)
+        print(f"✓ Updated {YAML_PATH}", file=sys.stderr)
+    elif dry_run:
+        print(f"(dry-run: no changes written)", file=sys.stderr)
+
 def main():
     parser = argparse.ArgumentParser(
         description="Update publications.yml from INSPIREHEP API",
@@ -186,27 +242,37 @@ def main():
 Examples:
   %(prog)s                           # Search collaboration:"extreme"
   %(prog)s --arxiv 2311.02210        # Search by arXiv ID
+  %(prog)s --update-missing-dois     # Find and fill missing DOIs
   %(prog)s --dry-run                 # Preview without writing
         """
     )
     parser.add_argument("--arxiv", help="Search by arXiv ID (e.g., 2311.02210)")
+    parser.add_argument("--update-missing-dois", action="store_true", help="Update all entries with missing DOI")
     parser.add_argument("--dry-run", action="store_true", help="Preview changes without writing")
     
     args = parser.parse_args()
     
-    if args.arxiv:
+    if args.update_missing_dois:
+        print("Searching for entries with arXiv but missing DOI...", file=sys.stderr)
+        update_missing_dois(dry_run=args.dry_run)
+    elif args.arxiv:
         query = f"arxiv:{args.arxiv}"
         print(f"Searching INSPIREHEP for arXiv:{args.arxiv}...", file=sys.stderr)
+        hits = fetch_inspire(query)
+        if hits:
+            update_publications(hits, dry_run=args.dry_run)
+        else:
+            print("✗ No results found or API error", file=sys.stderr)
+            sys.exit(1)
     else:
         query = 'collaboration:"extreme"'
         print(f"Searching INSPIREHEP for all ExTrEMe collaboration papers...", file=sys.stderr)
-    
-    hits = fetch_inspire(query)
-    if hits:
-        update_publications(hits, dry_run=args.dry_run)
-    else:
-        print("✗ No results found or API error", file=sys.stderr)
-        sys.exit(1)
+        hits = fetch_inspire(query)
+        if hits:
+            update_publications(hits, dry_run=args.dry_run)
+        else:
+            print("✗ No results found or API error", file=sys.stderr)
+            sys.exit(1)
 
 if __name__ == "__main__":
     main()
