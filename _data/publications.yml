@@ -69,12 +69,6 @@
     authors: T. S. Domingues et al. (The ExTrEMe Collaboration)
     venue: Under review
     arxiv: '2602.22490'
-  - year: 2024
-    title: Causality violations in simulations of large and small heavy-ion collisions
-    authors: Krupczak, Renata et al.
-    venue: Phys.Rev.C, 034908
-    doi: 10.1103/PhysRevC.109.034908
-    arxiv: '2311.02210'
 - category: Pythia and Angantyr Studies
   items:
   - year: 2018
