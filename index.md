@@ -4,7 +4,7 @@ title: The ExTrEMe Collaboration
 ---
 
 <div class="hero-panel">
-The <strong>EXperiment</strong> and <strong>TheoRy</strong> in <strong>Extreme</strong> <strong>MattEr</strong> collaboration is a group of researchers focused on phenomenology of high-energy heavy-ion collisions, with special interest in connecting theory with experiments.
+The <strong>Ex</strong>periment and <strong>T</strong>heo<strong>r</strong>yin <strong>E</strong>xtreme <strong>M</strong>att<strong>e</strong>r collaboration is a group of researchers focused on phenomenology of high-energy heavy-ion collisions, with special interest in connecting theory with experiments.
 </div>
 
 ## Research Scope
