@@ -8,7 +8,7 @@ The legacy site used a web form. For GitHub Pages reliability, this page should 
 
 ## Contact
 
-- General inquiries: contact@extreme-collaboration.org
+- General inquiries: mluzum@usp.br
 - Collaboration website issues: open an issue in this repository
 
 ## Recommended Additions
