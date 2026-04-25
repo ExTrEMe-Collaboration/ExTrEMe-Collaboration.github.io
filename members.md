@@ -16,22 +16,22 @@ permalink: /members/
 - [Jorge Noronha](http://lattes.cnpq.br/8775304977333608) - Prof., University of Illinois Urbana-Champaign, USA
 - [Tiago Nunes](http://lattes.cnpq.br/6029696722164198) - Prof., UFSC, Brazil
 - [Mauricio Hippert](http://lattes.cnpq.br/0055928814441454) - Prof., UERJ, Brazil
-- Gabriel Rocha - Prof. UFF, Brazil
+- [Gabriel Rocha](http://lattes.cnpq.br/8012194884198562) - Prof. UFF, Brazil
 - [Jun Takahashi](http://lattes.cnpq.br/7057603141934226) - Prof., Unicamp, Brazil
-- Giorgio Torrieri - Prof., Unicamp, Brazil
+- [Giorgio Torrieri](http://lattes.cnpq.br/9839588082439361) - Prof., Unicamp, Brazil
 
 
 ### Postdocs
 
-- Osvaldo Neto - USP, Brazil
-- Rajeev Singh
+- [Osvaldo F. Neto](http://lattes.cnpq.br/6790966492250263) - USP, Brazil
+- [Rajeev Singh](https://inspirehep.net/authors/1629845?ui-citation-summary=true) - FIAS, Germany
 
 ### Students
 
 - Giuliano Dias - PhD, USP, Brazil
 - [Thiago S. Domingues](http://lattes.cnpq.br/4092459866318436) - PhD, USP, Brazil
 - [Cicero D. Muncinelli](http://lattes.cnpq.br/8192066238557675) - PhD, Unicamp, Brazil
-- Eduardo - PhD, UFSC, Brazil
+- Eduardo Oliveira Pinho - PhD, UFSC, Brazil
 
 
 ## Affiliated Members
