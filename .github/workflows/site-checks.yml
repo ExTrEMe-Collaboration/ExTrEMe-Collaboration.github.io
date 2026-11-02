@@ -7,7 +7,32 @@ on:
       - main
 
 jobs:
+  data-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Validate YAML data files
+        run: |
+          python -c '
+          import yaml
+          for path in ["_data/publications.yml", "_data/talks.yml"]:
+              with open(path, "r", encoding="utf-8") as f:
+                  data = yaml.safe_load(f)
+              print(f"✓ {path} is valid YAML ({len(data)} items)")
+          '
+
   jekyll-build:
+    needs: data-check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,5 +63,5 @@ jobs:
             --accept 200,206,301,302,307,308,403,429
             --max-retries 2
             --timeout 20
-            README.md MIGRATION_PLAN.md members.md contact.md simulation-chain.md wiki.md index.md
+            README.md MIGRATION_PLAN.md members.md contact.md simulation-chain.md wiki.md index.md publications.md presentations.md
           fail: true

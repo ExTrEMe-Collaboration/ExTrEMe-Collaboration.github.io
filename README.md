@@ -1,50 +1,90 @@
-# ExTrEMe Collaboration
+# ExTrEMe Collaboration Website
 
-The EXperiment and TheoRy in Extreme MattEr collaboration is a group of researchers focused on phenomenology of high-energy heavy-ion collisions, with special interest in connecting theory with experiments.
-
-This repository hosts the collaboration website and wiki for GitHub Pages.
+Website and resources for the **ExTrEMe** (**Ex**periment and **T**heo**r**y in **E**xtreme **M**att**e**r) Collaboration, hosted on GitHub Pages: [https://extreme-collaboration.github.io](https://extreme-collaboration.github.io).
 
 ## Site Structure
 
-- Home: `index.md`
-- Members: `members.md`
-- Publications: `publications.md`
-- Simulation Chain: `simulation-chain.md`
-- Presentations: `presentations.md`
-- Wiki: `wiki.md`
-- Contact: `contact.md`
-- Migration plan: `MIGRATION_PLAN.md`
+- **Home**: `index.md` — Overview, research scope, participating institutions, quick navigation
+- **Members**: `members.md` — Faculty coordinators, postdocs, students, and alumni
+- **Simulation Chain**: `simulation-chain.md` — End-to-end multi-stage hydrodynamic simulation framework and architecture
+- **Publications**: `publications.md` — Dynamic listing generated from `_data/publications.yml`
+- **Presentations & Talks**: `presentations.md` — Dynamic listing generated from `_data/talks.yml`
+- **Contact**: `contact.md` — Coordination, inquiries, student/postdoc opportunities
+- **Internal Wiki**: `wiki.md` — Internal guidelines and onboarding notes
 
-## Structured Content Data
+## Maintaining Structured Data
 
-- Publications dataset: `/_data/publications.yml`
-- Talks dataset: `/_data/talks.yml`
+### Publications (`_data/publications.yml`)
 
-The `publications.md` and `presentations.md` pages are rendered from these data files.
+The publications page is generated automatically from `_data/publications.yml`.
 
-## Legacy Source Pages
+#### Updating via the INSPIREHEP Synchronization Script
 
-- https://sites.ifi.unicamp.br/extreme/
-- https://sites.ifi.unicamp.br/extreme/simulation-chain/
-- https://sites.ifi.unicamp.br/extreme/members/
-- https://sites.ifi.unicamp.br/extreme/contato/
-- https://sites.ifi.unicamp.br/hadrex/publicacoes/
+We provide a Python script in `scripts/update_publications_from_inspirehep.py` to synchronize publications with INSPIREHEP:
 
-## Publishing
+```bash
+# Refresh and sync all existing entries (updates published journal venues, DOIs, years)
+python3 scripts/update_publications_from_inspirehep.py --sync-all
 
-1. Push changes to the default branch.
-2. In repository settings, enable GitHub Pages from the default branch root.
-3. Confirm the site URL in GitHub Pages settings.
+# Fetch and add a new paper by arXiv ID
+python3 scripts/update_publications_from_inspirehep.py --arxiv 2409.17127
 
-## Contribution Workflow
+# Search and fill in missing DOIs
+python3 scripts/update_publications_from_inspirehep.py --update-missing-dois
 
-1. Open a branch for content updates.
-2. Submit a pull request with a short summary and source links.
-3. After merge, verify the rendered page and external links.
+# Preview changes without modifying files
+python3 scripts/update_publications_from_inspirehep.py --dry-run
+```
 
-## Automated Checks
+*Prerequisites*: Uses standard library modules (`urllib`, `json`, `argparse`). Requires `pyyaml` (pre-installed in Anaconda/Miniconda or `pip install pyyaml`).
 
-GitHub Actions workflow `site-checks.yml` runs on pushes and pull requests:
+#### Manual Publication Entries
 
-1. Jekyll build validation
-2. Markdown link validation
+Entries follow this format in `_data/publications.yml`:
+
+```yaml
+- year: 2024
+  title: Effect of causality constraints on Bayesian analyses of heavy-ion collisions
+  authors: T. S. Domingues et al. (The ExTrEMe Collaboration)
+  venue: Phys. Rev. C 110, 064904 (2024)
+  doi: 10.1103/PhysRevC.110.064904
+  arxiv: '2409.17127'
+  url: https://... # (optional, for theses or non-DOI links)
+```
+
+- Always quote numeric-looking arXiv IDs (e.g. `'2409.17127'`) so YAML does not interpret them as floats.
+- `doi`: store only the identifier (e.g., `10.1103/PhysRevC.110.064904`); the link is constructed automatically in Jekyll.
+
+### Presentations and Talks (`_data/talks.yml`)
+
+Talks are sorted chronologically by the `date_sort` field (`YYYY-MM`):
+
+```yaml
+- date_sort: 2025-12
+  year: 2025
+  month: December
+  speaker: Matthew Luzum
+  type: Oral
+  event: UIUC Nuclear Seminar
+  location: Urbana, IL, USA
+  title: "Exploring the shape of the transverse momentum spectra in relativistic heavy-ion collisions"
+  url: https://... # (optional link to slides or event page)
+```
+
+- If a title contains colons, quote the full title string to avoid YAML parsing syntax errors.
+
+## Automated Checks (CI)
+
+A GitHub Actions workflow (`.github/workflows/site-checks.yml`) validates every push and pull request:
+
+1. **YAML Data Validation**: Verifies that `_data/publications.yml` and `_data/talks.yml` are syntactically valid YAML.
+2. **Jekyll Build**: Builds the complete site to ensure layouts and Liquid templates render cleanly.
+3. **Markdown Link Check**: Scans markdown pages for dead local links or malformed references using `lychee`.
+
+## Legacy Archive References
+
+Migrated from earlier WordPress web resources:
+- Legacy Home: `https://sites.ifi.unicamp.br/extreme/`
+- Legacy Simulation Chain: `https://sites.ifi.unicamp.br/extreme/simulation-chain/`
+- Legacy Members: `https://sites.ifi.unicamp.br/extreme/members/`
+- Legacy Publications & Theses: `https://sites.ifi.unicamp.br/hadrex/publicacoes/`

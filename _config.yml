@@ -2,13 +2,16 @@ title: The ExTrEMe Collaboration
 email: mluzum@usp.br
 description: EXperiment and TheoRy in Extreme MattEr
 baseurl: ""
-url: ""
+url: "https://extreme-collaboration.github.io"
 theme: minima
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 header_pages:
   - members.md
+  - simulation-chain.md
   - publications.md
   - presentations.md
   - contact.md

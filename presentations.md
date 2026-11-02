@@ -4,7 +4,7 @@ title: Presentations and Talks
 permalink: /presentations/
 ---
 
-This page is rendered from `/_data/talks.yml`.
+Invited talks, conference presentations, and seminars given by members of the ExTrEMe Collaboration.
 
 {% assign talks_sorted = site.data.talks | sort: "date_sort" | reverse %}
 {% assign current_year = "" %}
@@ -19,12 +19,3 @@ This page is rendered from `/_data/talks.yml`.
   
   {{ item.title }}{% if item.location %} ({{ item.location }}){% endif %}{% if item.url %} - [Link]({{ item.url }}){% endif %}
 {% endfor %}
-
-## Legacy Source
-
-- [Legacy homepage presentation list](https://sites.ifi.unicamp.br/extreme/)
-
-## Maintenance
-
-- Add or update entries in `/_data/talks.yml`
-- Keep `date_sort` in `YYYY-MM` format for ordering

@@ -5,6 +5,7 @@
     authors: T. N. da Silva et al.
     venue: Proceedings 2019, 10(1), 5
     doi: 10.3390/proceedings2019010005
+    arxiv: '1811.05048'
   - year: 2020
     title: Measuring Momentum-Dependent Flow Fluctuations in Heavy-Ion Collisions
     authors: M. Hippert et al.
@@ -24,6 +25,7 @@
     authors: M. Hippert et al. (The ExTrEMe Collaboration)
     venue: Phys. Rev. C 102, 064909
     doi: 10.1103/PhysRevC.102.064909
+    arxiv: '2006.13358'
   - year: 2021
     title: Pre-hydrodynamic evolution and its signatures in final-state heavy-ion
       observables
@@ -54,14 +56,14 @@
     title: Universality of scaled particle spectra in ultrarelativistic heavy-ion
       collisions
     authors: C. D. Muncinelli et al. (The ExTrEMe Collaboration)
-    venue: Phys.Rev.C 112 (2025) 6
-    doi: 10.1103/2yqq-qfwd
+    venue: Phys. Rev. C 112, 064922 (2025)
+    doi: 10.1103/PhysRevC.112.064922
     arxiv: '2406.15208'
   - year: 2025
     title: Probing the onset of collectivity via scaled particle spectra in ultrarelativistic
       nuclear collisions
     authors: T. S. Domingues et al. (The ExTrEMe Collaboration)
-    venue: Quark Matter 2025 proceedings
+    venue: EPJ Web Conf. 364, 04011 (2026) (Quark Matter 2025 proceedings)
     doi: 10.1051/epjconf/202636404011
     arxiv: '2508.21176'
   - year: 2026
@@ -70,10 +72,17 @@
     venue: Under review
     arxiv: '2602.22490'
   - year: 2026
-    title: Scaled transverse-momentum spectra as a probe of collective dynamics in heavy-ion collisions
+    title: Scaled transverse-momentum spectra as a probe of collective dynamics in
+      heavy-ion collisions
     authors: T. S. Domingues and Matthew Luzum for the ExTrEMe Collaboration
     venue: Advances in QCD at the LHC and the EIC 2025 proceedings
     arxiv: '2603.15891'
+  - year: 2024
+    title: Effect of causality constraints on Bayesian analyses of heavy-ion collisions
+    authors: T. S. Domingues et al. (The ExTrEMe Collaboration)
+    venue: Phys. Rev. C 110, 064904 (2024)
+    doi: 10.1103/PhysRevC.110.064904
+    arxiv: '2409.17127'
 - category: Pythia and Angantyr Studies
   items:
   - year: 2018
@@ -141,6 +150,13 @@
     authors: G. S. Denicol and J. Noronha
     venue: Phys. Rev. Lett. 124, 152301
     doi: 10.1103/PhysRevLett.124.152301
+    arxiv: '1908.09957'
+  - year: 2026
+    title: Flux-conservative Bemfica-Disconzi-Noronha-Kovtun hydrodynamics and shock regularization
+    authors: N. Clarisse, E. O. Pinho, T. Patel, F. S. Bemfica, M. Hippert, J. Noronha
+    venue: Phys. Rev. D 113, 024051
+    doi: 10.1103/PhysRevD.113.024051
+    arxiv: '2510.16603'
 - category: NeXSPheRIO Legacy Papers
   items:
   - year: 2012
@@ -171,6 +187,16 @@
     arxiv: '0902.4870'
 - category: Theses
   items:
+  - year: 2024
+    title: Effects of causality constraints on Bayesian analysis of heavy-ion collisions
+    authors: Thiago Siqueira Domingues
+    venue: MSc thesis, Universidade de São Paulo
+    doi: 10.11606/D.43.2024.tde-30092024-091952
+    url: https://www.teses.usp.br/teses/disponiveis/43/43134/tde-30092024-091952/
+  - year: 2024
+    title: Initial conditions in relativistic heavy ion collisions and the 3D structure of the proton
+    authors: Gabriel Rabelo Soares
+    venue: MSc thesis, Unicamp
   - year: 2023
     title: Machine Learning Methods for Strangeness reconstruction in ALICE
     authors: Gabriel Reis Garcia
