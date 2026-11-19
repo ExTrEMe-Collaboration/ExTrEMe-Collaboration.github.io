@@ -1,6 +1,6 @@
 # ExTrEMe Collaboration Website
 
-Website and resources for the **ExTrEMe** (**Ex**periment and **T**heo**r**y in **E**xtreme **M**att**e**r) Collaboration, hosted on GitHub Pages: [https://extreme-collaboration.github.io](https://extreme-collaboration.github.io).
+Website and resources for the **ExTrEMe** (**Ex**periment and **T**heo**r**y in **E**xtreme **M**att**e**r) Collaboration, hosted on GitHub Pages: [https://www.extreme-collaboration.science](https://www.extreme-collaboration.science).
 
 ## Site Structure
 
