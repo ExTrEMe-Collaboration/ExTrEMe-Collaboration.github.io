@@ -1,0 +1,156 @@
+# Collaboration roster, rendered on /members/.
+#
+# `name` is the canonical spelling used everywhere on the site: speakers in
+# _data/talks.yml must match one of these names exactly to be linked.
+#
+# Fields per person:
+#   name:        Canonical full name.
+#   position:    Short position label (e.g. "Professor", "PhD student", "PhD 2023").
+#   affiliation: Institution name, with acronym in parentheses.
+#   country:     Country of the affiliation.
+#   url:         (optional) Lattes CV, INSPIRE profile or personal page.
+#   role:        (optional) Collaboration role, highlighted on the card.
+
+- group: Faculty & Coordinators
+  id: faculty
+  people:
+    - name: David D. Chinellato
+      position: Professor
+      affiliation: Stefan Meyer Institute for Subatomic Physics (ÖAW), Vienna
+      country: Austria
+      url: https://lattes.cnpq.br/2080099102941335
+    - name: Gabriel S. Denicol
+      position: Professor
+      affiliation: Universidade Federal Fluminense (UFF)
+      country: Brazil
+      url: https://lattes.cnpq.br/1823949676739992
+    - name: Fernando Gardim
+      position: Professor
+      affiliation: Universidade Federal de Alfenas (UNIFAL)
+      country: Brazil
+      url: https://lattes.cnpq.br/2425549033248106
+    - name: Andre V. Giannini
+      position: Professor
+      affiliation: Universidade Federal da Grande Dourados (UFGD)
+      country: Brazil
+      url: https://lattes.cnpq.br/2669085919057438
+    - name: Matthew Luzum
+      position: Professor
+      affiliation: Universidade de São Paulo (USP)
+      country: Brazil
+      url: https://lattes.cnpq.br/3672547273353904
+      role: Collaboration Coordinator
+    - name: Jorge Noronha
+      position: Professor
+      affiliation: University of Illinois Urbana-Champaign (UIUC)
+      country: USA
+      url: https://lattes.cnpq.br/8775304977333608
+    - name: Tiago Nunes da Silva
+      position: Professor
+      affiliation: Universidade Federal de Santa Catarina (UFSC)
+      country: Brazil
+      url: https://lattes.cnpq.br/6029696722164198
+    - name: Mauricio Hippert
+      position: Professor
+      affiliation: Universidade do Estado do Rio de Janeiro (UERJ)
+      country: Brazil
+      url: https://lattes.cnpq.br/0055928814441454
+    - name: Gabriel S. Rocha
+      position: Professor
+      affiliation: Universidade Federal Fluminense (UFF)
+      country: Brazil
+      url: https://lattes.cnpq.br/8012194884198562
+    - name: Jun Takahashi
+      position: Professor
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil
+      url: https://lattes.cnpq.br/7057603141934226
+    - name: Giorgio Torrieri
+      position: Professor
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil
+      url: https://lattes.cnpq.br/9839588082439361
+
+- group: Postdoctoral Researchers
+  id: postdocs
+  people:
+    - name: Osvaldo F. Neto
+      position: Postdoc
+      affiliation: Universidade de São Paulo (USP)
+      country: Brazil
+      url: https://lattes.cnpq.br/6790966492250263
+    - name: Rajeev Singh
+      position: Postdoc
+      affiliation: Frankfurt Institute for Advanced Studies (FIAS)
+      country: Germany
+      url: https://inspirehep.net/authors/1629845
+
+- group: Graduate Students
+  id: students
+  people:
+    - name: Giuliano Dias
+      position: PhD student
+      affiliation: Universidade de São Paulo (USP)
+      country: Brazil
+    - name: Thiago S. Domingues
+      position: PhD student
+      affiliation: Universidade de São Paulo (USP)
+      country: Brazil
+      url: https://lattes.cnpq.br/4092459866318436
+    - name: Cicero D. Muncinelli
+      position: PhD student
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil
+      url: https://lattes.cnpq.br/8192066238557675
+    - name: Eduardo Oliveira Pinho
+      position: PhD student
+      affiliation: Universidade Federal de Santa Catarina (UFSC)
+      country: Brazil
+    - name: Renata Krupczak
+      position: PhD student / Researcher
+      affiliation: Universidade Federal de Santa Catarina (UFSC) / Bielefeld University
+      country: Brazil / Germany
+      url: https://inspirehep.net/authors/1993437
+
+- group: Alumni & Former Members
+  id: alumni
+  alumni: true
+  people:
+    - name: Willian M. Serenone
+      position: Former postdoc
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil
+      url: https://lattes.cnpq.br/3286464028110773
+    - name: Antonio M. S. N. Ferreira
+      position: Former postdoc
+      affiliation: University of Valencia
+      country: Spain
+      url: https://lattes.cnpq.br/3311487873554788
+    - name: Gabriel Reis Garcia
+      position: PhD 2023
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil
+    - name: André Vieira da Silva
+      position: PhD 2020
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil
+    - name: Danilo Silva de Albuquerque
+      position: PhD 2019
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil
+    - name: Gabriel Rabelo Soares
+      position: MSc 2024
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil
+    - name: Vitor Hugo Ribeiro
+      position: MSc 2023
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil
+    - name: João Paulo Picchetti
+      position: MSc 2022
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil
+    - name: João Guilherme Prado Barbon
+      position: MSc 2021
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil

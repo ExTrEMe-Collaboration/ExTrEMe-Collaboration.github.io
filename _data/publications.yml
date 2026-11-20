@@ -1,55 +1,59 @@
 - category: ExTrEMe Collaboration Papers
+  description: Papers of the collaboration on the hydrodynamic modeling of heavy-ion
+    collisions, developed with the support of the FAPESP thematic project 2017/05685-2
+    and its successors.
   items:
   - year: 2019
     title: Testing a Best-Fit Hydrodynamical Model Using PCA
     authors: T. N. da Silva et al.
-    venue: Proceedings 2019, 10(1), 5
+    venue: Proceedings 10, 5 (2019)
     doi: 10.3390/proceedings2019010005
     arxiv: '1811.05048'
   - year: 2020
     title: Measuring Momentum-Dependent Flow Fluctuations in Heavy-Ion Collisions
     authors: M. Hippert et al.
-    venue: Phys. Rev. C 101, 034903
+    venue: Phys. Rev. C 101, 034903 (2020)
     doi: 10.1103/PhysRevC.101.034903
     arxiv: '1906.08915'
-  - year: 2020
+  - year: 2021
     title: Momentum-dependent flow fluctuations as a hydrodynamic response to initial
       geometry
     authors: M. Hippert et al.
-    venue: Quark Matter 2019 proceedings
-    arxiv: '2003.01147'
+    venue: Nucl. Phys. A 1005, 121982 (2021)
+    note: Quark Matter 2019 proceedings
     doi: 10.1016/j.nuclphysa.2020.121982
+    arxiv: '2003.01147'
   - year: 2020
     title: Probing the structure of the initial state of heavy-ion collisions with
       pT-dependent flow fluctuations
     authors: M. Hippert et al. (The ExTrEMe Collaboration)
-    venue: Phys. Rev. C 102, 064909
+    venue: Phys. Rev. C 102, 064909 (2020)
     doi: 10.1103/PhysRevC.102.064909
     arxiv: '2006.13358'
   - year: 2021
     title: Pre-hydrodynamic evolution and its signatures in final-state heavy-ion
       observables
     authors: T. N. da Silva et al.
-    venue: Phys. Rev. C 103, 054906
+    venue: Phys. Rev. C 103, 054906 (2021)
     doi: 10.1103/PhysRevC.103.054906
     arxiv: '2006.02324'
   - year: 2023
     title: Pre-hydrodynamic evolution in large and small systems
     authors: T. N. da Silva et al. (The ExTrEMe Collaboration)
-    venue: Phys. Rev. C 107, 044901
+    venue: Phys. Rev. C 107, 044901 (2023)
     doi: 10.1103/PhysRevC.107.044901
     arxiv: '2211.10561'
   - year: 2023
     title: Assessing the ultracentral flow puzzle in hydrodynamic modeling of heavy-ion
       collisions
     authors: A. V. Giannini et al. (The ExTrEMe Collaboration)
-    venue: Phys. Rev. C 107, 044907
+    venue: Phys. Rev. C 107, 044907 (2023)
     doi: 10.1103/PhysRevC.107.044907
     arxiv: '2203.17011'
   - year: 2024
     title: Causality violations in simulations of large and small heavy-ion collisions
     authors: R. Krupczak et al. (The ExTrEMe Collaboration)
-    venue: Phys. Rev. C 109, 034908
+    venue: Phys. Rev. C 109, 034908 (2024)
     doi: 10.1103/PhysRevC.109.034908
     arxiv: '2311.02210'
   - year: 2025
@@ -59,11 +63,12 @@
     venue: Phys. Rev. C 112, 064922 (2025)
     doi: 10.1103/PhysRevC.112.064922
     arxiv: '2406.15208'
-  - year: 2025
+  - year: 2026
     title: Probing the onset of collectivity via scaled particle spectra in ultrarelativistic
       nuclear collisions
     authors: T. S. Domingues et al. (The ExTrEMe Collaboration)
-    venue: EPJ Web Conf. 364, 04011 (2026) (Quark Matter 2025 proceedings)
+    venue: EPJ Web Conf. 364, 04011 (2026)
+    note: Quark Matter 2025 proceedings
     doi: 10.1051/epjconf/202636404011
     arxiv: '2508.21176'
   - year: 2026
@@ -74,8 +79,9 @@
   - year: 2026
     title: Scaled transverse-momentum spectra as a probe of collective dynamics in
       heavy-ion collisions
-    authors: T. S. Domingues and Matthew Luzum for the ExTrEMe Collaboration
-    venue: Advances in QCD at the LHC and the EIC 2025 proceedings
+    authors: T. S. Domingues and M. Luzum, for the ExTrEMe Collaboration
+    venue: Preprint
+    note: Advances in QCD at the LHC and the EIC 2025 proceedings
     arxiv: '2603.15891'
   - year: 2024
     title: Effect of causality constraints on Bayesian analyses of heavy-ion collisions
@@ -84,146 +90,258 @@
     doi: 10.1103/PhysRevC.110.064904
     arxiv: '2409.17127'
 - category: Pythia and Angantyr Studies
+  description: Heavy-ion phenomenology with PYTHIA and PYTHIA/Angantyr coupled to
+    hadronic rescattering.
   items:
   - year: 2018
     title: Resonance suppression from color reconnection
     authors: R. Acconcia et al.
-    venue: Phys. Rev. D 97, 036010
+    venue: Phys. Rev. D 97, 036010 (2018)
     doi: 10.1103/PhysRevD.97.036010
     arxiv: '1707.02075'
-  - year: 2019
+  - year: 2020
     title: Studying the effect of the hadronic phase in nuclear collisions with PYTHIA
       and UrQMD
     authors: A. V. da Silva et al.
-    venue: SQM 2019 proceedings
-    arxiv: '1911.12824'
+    venue: Springer Proc. Phys. 250, 319 (2020)
+    note: SQM 2019 proceedings
     doi: 10.1007/978-3-030-53448-6_50
+    arxiv: '1911.12824'
   - year: 2020
-    title: Suppression of the nuclear modification factor with a hybrid model based
-      on perturbative QCD and hadronic rescattering
+    title: Studies of heavy-ion collisions using PYTHIA Angantyr and UrQMD
     authors: A. V. da Silva et al.
     venue: Preprint
+    note: Earlier version titled “Suppression of the nuclear modification factor with
+      a hybrid model based on perturbative QCD and hadronic rescattering”
     arxiv: '2002.10236'
 - category: 3C Collaboration and Vorticity
+  description: Vorticity, vortex rings and hyperon polarization in the quark-gluon
+    plasma, in collaboration with the 3C group.
   items:
   - year: 2021
     title: Lambda polarizations from thermalized jet energy
     authors: W. M. Serenone et al.
-    venue: Phys. Lett. B 820, 136500
+    venue: Phys. Lett. B 820, 136500 (2021)
     doi: 10.1016/j.physletb.2021.136500
     arxiv: '2102.11919'
   - year: 2021
     title: Vortex rings from high energy central p+A collisions
     authors: M. A. Lisa et al.
-    venue: Phys. Rev. C 104, L011901
+    venue: Phys. Rev. C 104, L011901 (2021)
     doi: 10.1103/PhysRevC.104.L011901
     arxiv: '2101.10872'
   - year: 2024
     title: Lambda polarization from vortex rings as the medium response for jet thermalization
     authors: V. H. Ribeiro et al.
-    venue: Phys. Rev. C 109, 014905
+    venue: Phys. Rev. C 109, 014905 (2024)
     doi: 10.1103/PhysRevC.109.014905
     arxiv: '2305.02428'
 - category: Selected Related Theory Papers
+  description: Papers by collaboration members supported by the FAPESP thematic project
+    2017/05685-2.
   items:
   - year: 2018
     title: Analytical attractor and the divergence of the slow-roll expansion in relativistic
       hydrodynamics
     authors: G. S. Denicol and J. Noronha
-    venue: Phys. Rev. D 97, 056021
+    venue: Phys. Rev. D 97, 056021 (2018)
     doi: 10.1103/PhysRevD.97.056021
     arxiv: '1711.01657'
   - year: 2018
     title: Anisotropic nonequilibrium hydrodynamic attractor
-    authors: M. Strickland, J. Noronha, G. S. Denicol
-    venue: Phys. Rev. D 97, 036020
+    authors: M. Strickland, J. Noronha, and G. S. Denicol
+    venue: Phys. Rev. D 97, 036020 (2018)
     doi: 10.1103/PhysRevD.97.036020
     arxiv: '1709.06644'
   - year: 2019
     title: Causality of the Einstein-Israel-Stewart theory with bulk viscosity
-    authors: F. S. Bemfica, M. M. Disconzi, J. Noronha
-    venue: Phys. Rev. Lett. 122, 221602
+    authors: F. S. Bemfica, M. M. Disconzi, and J. Noronha
+    venue: Phys. Rev. Lett. 122, 221602 (2019)
     doi: 10.1103/PhysRevLett.122.221602
     arxiv: '1901.06701'
   - year: 2020
     title: Exact hydrodynamic attractor of an ultrarelativistic gas of hard spheres
     authors: G. S. Denicol and J. Noronha
-    venue: Phys. Rev. Lett. 124, 152301
+    venue: Phys. Rev. Lett. 124, 152301 (2020)
     doi: 10.1103/PhysRevLett.124.152301
     arxiv: '1908.09957'
   - year: 2026
-    title: Flux-conservative Bemfica-Disconzi-Noronha-Kovtun hydrodynamics and shock regularization
-    authors: N. Clarisse, E. O. Pinho, T. Patel, F. S. Bemfica, M. Hippert, J. Noronha
-    venue: Phys. Rev. D 113, 024051
+    title: Flux-conservative Bemfica-Disconzi-Noronha-Kovtun hydrodynamics and shock
+      regularization
+    authors: N. Clarisse, E. O. Pinho, T. Patel, F. S. Bemfica, M. Hippert, and J.
+      Noronha
+    venue: Phys. Rev. D 113, 024051 (2026)
     doi: 10.1103/PhysRevD.113.024051
     arxiv: '2510.16603'
+  - year: 2017
+    title: Homogeneous isotropization and equilibration of a strongly coupled plasma
+      with a critical point
+    authors: R. Critelli, R. Rougemont, and J. Noronha
+    venue: JHEP 12, 029 (2017)
+    doi: 10.1007/JHEP12(2017)029
+    arxiv: '1709.03131'
+  - year: 2018
+    title: η′ production in nucleus-nucleus collisions as a probe of chiral dynamics
+    authors: G. Torrieri
+    venue: Phys. Rev. C 98, 014901 (2018)
+    doi: 10.1103/PhysRevC.98.014901
+    arxiv: '1802.09011'
+  - year: 2018
+    title: Nonresistive dissipative magnetohydrodynamics from the Boltzmann equation
+      in the 14-moment approximation
+    authors: G. S. Denicol, X.-G. Huang, E. Molnár, G. M. Monteiro, H. Niemi, J. Noronha,
+      D. H. Rischke, and Q. Wang
+    venue: Phys. Rev. D 98, 076009 (2018)
+    doi: 10.1103/PhysRevD.98.076009
+    arxiv: '1804.05210'
+  - year: 2018
+    title: Causality and existence of solutions of relativistic viscous fluid dynamics
+      with gravity
+    authors: F. S. Bemfica, M. M. Disconzi, and J. Noronha
+    venue: Phys. Rev. D 98, 104064 (2018)
+    doi: 10.1103/PhysRevD.98.104064
+    arxiv: '1708.06255'
+  - year: 2019
+    title: Resummed hydrodynamic expansion for a plasma of particles interacting with
+      fields
+    authors: L. Tinti, G. Vujanovic, J. Noronha, and U. Heinz
+    venue: Phys. Rev. D 99, 016009 (2019)
+    doi: 10.1103/PhysRevD.99.016009
+    arxiv: '1808.06436'
+  - year: 2019
+    title: 'Collective effects in nuclear collisions: theory overview'
+    authors: J. Noronha
+    venue: Nucl. Phys. A 982, 78 (2019)
+    doi: 10.1016/j.nuclphysa.2018.11.017
+    arxiv: '1807.06191'
+  - year: 2019
+    title: Holographic Bjorken flow of a hot and dense fluid in the vicinity of a
+      critical point
+    authors: R. Critelli, R. Rougemont, and J. Noronha
+    venue: Phys. Rev. D 99, 066004 (2019)
+    doi: 10.1103/PhysRevD.99.066004
+    arxiv: '1805.00882'
+  - year: 2019
+    title: Hydrodynamic attractor and the fate of perturbative expansions in Gubser
+      flow
+    authors: G. S. Denicol and J. Noronha
+    venue: Phys. Rev. D 99, 116004 (2019)
+    doi: 10.1103/PhysRevD.99.116004
+    arxiv: '1804.04771'
+  - year: 2019
+    title: Nonlinear causality of general first-order relativistic viscous hydrodynamics
+    authors: F. S. Bemfica, M. M. Disconzi, and J. Noronha
+    venue: Phys. Rev. D 100, 104020 (2019)
+    doi: 10.1103/PhysRevD.100.104020
+    arxiv: '1907.12695'
+  - year: 2020
+    title: Sensitivity study with a D and B mesons modular simulation code of heavy
+      flavor R<sub>AA</sub> and azimuthal anisotropies based on beam energy, initial
+      conditions, hadronization, and suppression mechanisms
+    authors: R. Katz, C. A. G. Prado, J. Noronha-Hostler, J. Noronha, and A. A. P.
+      Suaide
+    venue: Phys. Rev. C 102, 024906 (2020)
+    doi: 10.1103/PhysRevC.102.024906
+    arxiv: '1906.10768'
+  - year: 2021
+    title: System response to the initial energy-momentum tensor in relativistic heavy-ion
+      collisions
+    authors: J. Sousa, J. Noronha, and M. Luzum
+    venue: Nucl. Phys. A 1005, 121890 (2021)
+    note: Quark Matter 2019 proceedings
+    doi: 10.1016/j.nuclphysa.2020.121890
+    arxiv: '2002.12735'
+  - year: 2021
+    title: Connecting far-from-equilibrium hydrodynamics to resummed transport coefficients
+      and attractors
+    authors: G. S. Denicol and J. Noronha
+    venue: Nucl. Phys. A 1005, 121748 (2021)
+    note: Quark Matter 2019 proceedings
+    doi: 10.1016/j.nuclphysa.2020.121748
+    arxiv: '2003.00181'
 - category: NeXSPheRIO Legacy Papers
+  description: Earlier event-by-event hydrodynamic studies with the NeXSPheRIO model.
   items:
   - year: 2012
     title: Effects of initial state fluctuations in the final state elliptic flow
       measurements using the NeXSPheRIO model
     authors: R. D. de Souza et al.
-    venue: Phys. Rev. C 85, 054909
+    venue: Phys. Rev. C 85, 054909 (2012)
     doi: 10.1103/PhysRevC.85.054909
     arxiv: '1110.5698'
   - year: 2012
     title: Coarse graining scale and effectiveness of hydrodynamic modeling
     authors: Ph. Mota et al.
-    venue: EPJ A 48, 165
+    venue: Eur. Phys. J. A 48, 165 (2012)
     doi: 10.1140/epja/i2012-12165-7
     arxiv: '1210.3129'
   - year: 2011
     title: Longitudinal dependence of two-particle momentum correlations from NEXSPHERIO
       model
     authors: M. Sharma et al.
-    venue: Phys. Rev. C 84, 054915
+    venue: Phys. Rev. C 84, 054915 (2011)
     doi: 10.1103/PhysRevC.84.054915
     arxiv: '1107.3587'
   - year: 2009
     title: Topology studies of hydrodynamics using two-particle correlation analysis
     authors: J. Takahashi et al.
-    venue: Phys. Rev. Lett. 103, 242301
+    venue: Phys. Rev. Lett. 103, 242301 (2009)
     doi: 10.1103/PhysRevLett.103.242301
     arxiv: '0902.4870'
+  - year: 2011
+    title: Multi-flux tube initial condition and event-by-event hydrodynamics
+    authors: Ph. Mota, T. Kodama, T. Koide, and J. Takahashi
+    venue: Nucl. Phys. A 862-863, 188 (2011)
+    doi: 10.1016/j.nuclphysa.2011.05.039
 - category: Theses
+  description: PhD and MSc theses by students of the collaboration.
   items:
   - year: 2024
     title: Effects of causality constraints on Bayesian analysis of heavy-ion collisions
     authors: Thiago Siqueira Domingues
-    venue: MSc thesis, Universidade de São Paulo
+    venue: MSc thesis, Universidade de São Paulo (USP)
     doi: 10.11606/D.43.2024.tde-30092024-091952
     url: https://www.teses.usp.br/teses/disponiveis/43/43134/tde-30092024-091952/
   - year: 2024
-    title: Initial conditions in relativistic heavy ion collisions and the 3D structure of the proton
+    title: Initial conditions in relativistic heavy ion collisions and the 3D structure
+      of the proton
     authors: Gabriel Rabelo Soares
-    venue: MSc thesis, Unicamp
+    venue: MSc thesis, Universidade Estadual de Campinas (Unicamp)
+    advisor: J. Takahashi and G. Torrieri
+    url: https://repositorio.unicamp.br/Acervo/Detalhe/1501398
   - year: 2023
     title: Machine Learning Methods for Strangeness reconstruction in ALICE
     authors: Gabriel Reis Garcia
-    venue: PhD thesis, Unicamp
+    venue: PhD thesis, Universidade Estadual de Campinas (Unicamp)
+    advisor: J. Takahashi
     url: http://repositorio.unicamp.br/jspui/handle/REPOSIP/276924
   - year: 2020
     title: Simulating heavy-ion collisions using a hybrid model based on QCD and hadronic
       rescattering
-    authors: Andre Vieira da Silva
-    venue: PhD thesis, Unicamp
+    authors: André Vieira da Silva
+    venue: PhD thesis, Universidade Estadual de Campinas (Unicamp)
+    advisor: D. D. Chinellato
   - year: 2019
-    title: Multi-strange hadrons in Pb-Pb collisions at the LHC with ALICE
+    title: Multi-strange hadrons in Pb–Pb collisions at the LHC with ALICE
     authors: Danilo Silva de Albuquerque
-    venue: PhD thesis, Unicamp
+    venue: PhD thesis, Universidade Estadual de Campinas (Unicamp)
+    advisor: J. Takahashi
     url: https://www.repositorio.unicamp.br/acervo/detalhe/1375952
   - year: 2023
     title: Vorticity rings in relativistic heavy ion collisions
     authors: Vitor Hugo Ribeiro
-    venue: MSc thesis, Unicamp
+    venue: MSc thesis, Universidade Estadual de Campinas (Unicamp)
+    advisor: J. Takahashi
     url: https://repositorio.unicamp.br/acervo/detalhe/1362898
   - year: 2022
     title: Studying the impact of the nucleon size in relativistic heavy-ion collisions
-    authors: Joao Paulo Picchetti
-    venue: MSc thesis, Unicamp
+    authors: João Paulo Picchetti
+    venue: MSc thesis, Universidade Estadual de Campinas (Unicamp)
+    advisor: J. Takahashi
     url: https://repositorio.unicamp.br/acervo/detalhe/1254908
   - year: 2021
     title: Jets, vortices and lambda polarization in the quark-gluon plasma
-    authors: Joao Guilherme Prado Barbon
-    venue: MSc thesis, Unicamp
+    authors: João Guilherme Prado Barbon
+    venue: MSc thesis, Universidade Estadual de Campinas (Unicamp)
+    advisor: J. Takahashi
     url: https://repositorio.unicamp.br/acervo/detalhe/1238847
