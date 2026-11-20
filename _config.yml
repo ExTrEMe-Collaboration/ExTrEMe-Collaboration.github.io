@@ -1,17 +1,40 @@
 title: The ExTrEMe Collaboration
+short_title: ExTrEMe
+tagline: Experiment and Theory in Extreme Matter
+description: >-
+  The ExTrEMe (EXperiment and TheoRy in Extreme MattEr) collaboration studies the
+  phenomenology of high-energy nuclear collisions, connecting QCD theory and
+  relativistic hydrodynamics with experimental measurements.
 email: admin@extreme-collaboration.science
-description: EXperiment and TheoRy in Extreme MattEr
 baseurl: ""
 url: "https://www.extreme-collaboration.science"
-theme: minima
+lang: en
+
+# Used for footer and contact links
+github_org: ExTrEMe-Collaboration
+site_repository: ExTrEMe-Collaboration/ExTrEMe-Collaboration.github.io
+
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-header_pages:
-  - members.md
-  - simulation-chain.md
-  - publications.md
-  - presentations.md
-  - contact.md
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+      image: /assets/images/og-image.jpg
+
+# Keep repository-only files out of the published site.
+exclude:
+  - README.md
+  - MIGRATION_PLAN.md
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - vendor/
+  - node_modules/
+  - .github/
+  - .jekyll-cache/

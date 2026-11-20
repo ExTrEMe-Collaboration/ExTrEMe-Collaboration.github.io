@@ -1,0 +1,53 @@
+---
+title: Talks & Presentations
+permalink: /presentations/
+eyebrow: Dissemination
+lead: Invited talks, conference presentations, seminars and posters given by members of the ExTrEMe Collaboration.
+---
+{%- assign talks = site.data.talks | sort: "date" | reverse -%}
+{%- assign by_year = talks | group_by_exp: "t", "t.date | slice: 0, 4" -%}
+{%- assign types = "Plenary talk,Invited talk,Talk,Flash talk,Seminar,Colloquium,Poster" | split: "," -%}
+{%- assign speakers = talks | map: "speaker" | uniq | sort -%}
+
+<div class="toolbar" data-filter="talks">
+  <label class="search">
+    {% include icon.html name="search" %}
+    <span class="sr-only">Search talks</span>
+    <input type="search" placeholder="Search titles, events, places…" autocomplete="off" data-filter-search>
+  </label>
+  <label class="select">
+    <span>Speaker</span>
+    <select data-filter-select="speaker">
+      <option value="">Everyone</option>
+      {%- for s in speakers %}
+      <option>{{ s }}</option>
+      {%- endfor %}
+    </select>
+  </label>
+  <div class="chips" role="group" aria-label="Filter by type">
+    <button type="button" class="chip" aria-pressed="true" data-filter-chip="">All <span class="count">{{ talks.size }}</span></button>
+    {%- for ty in types %}
+    {%- assign n = talks | where: "type", ty | size %}
+    {%- if n > 0 %}
+    <button type="button" class="chip" aria-pressed="false" data-filter-chip="{{ ty }}"><span class="dot" data-badge="{{ ty | slugify }}"></span>{{ ty }} <span class="count">{{ n }}</span></button>
+    {%- endif %}
+    {%- endfor %}
+  </div>
+  <p class="filter-status" aria-live="polite" data-filter-status></p>
+</div>
+
+<div class="timeline" data-filter-list>
+  {%- for year in by_year %}
+  <section class="year-group" data-filter-group>
+    <h2 class="year-label">{{ year.name }}</h2>
+    <ol class="talk-list">
+      {%- for t in year.items %}
+      {% include talk.html talk=t %}
+      {%- endfor %}
+    </ol>
+  </section>
+  {%- endfor %}
+</div>
+<p class="empty-state" data-filter-empty hidden>No talks match these filters.</p>
+
+<p class="page-note">Missing a talk? Add it to <code>_data/talks.yml</code> in the <a href="https://github.com/{{ site.site_repository }}" target="_blank" rel="noopener">website repository</a> or <a href="{{ '/contact/' | relative_url }}">let us know</a>.</p>

@@ -1,0 +1,70 @@
+---
+title: Members
+permalink: /members/
+eyebrow: People
+lead: Faculty, postdoctoral researchers and students working together on the phenomenology of high-energy nuclear collisions.
+wide: true
+---
+<nav class="pill-nav" aria-label="Member groups">
+  {%- for group in site.data.members %}
+  <a href="#{{ group.id }}">{{ group.group }} <span class="count">{{ group.people.size }}</span></a>
+  {%- endfor %}
+</nav>
+
+{% for group in site.data.members %}
+<section class="member-group" id="{{ group.id }}">
+  <h2>{{ group.group }}</h2>
+
+  {%- if group.alumni %}
+  <ul class="alumni-list">
+    {%- for person in group.people %}
+    {%- assign n_talks = site.data.talks | where: "speaker", person.name | size %}
+    <li id="{{ person.name | slugify: 'latin' }}">
+      <span class="alumni-name">
+        {%- if person.url %}<a href="{{ person.url }}" target="_blank" rel="noopener">{{ person.name }}</a>{% else %}{{ person.name }}{% endif -%}
+      </span>
+      <span class="alumni-position">{{ person.position }}</span>
+      <span class="alumni-affiliation">{{ person.affiliation }}</span>
+      <span class="alumni-talks">
+        {%- if n_talks > 0 %}<a href="{{ '/presentations/' | relative_url }}?speaker={{ person.name | url_encode }}">{{ n_talks }} talk{% if n_talks > 1 %}s{% endif %}</a>{% endif -%}
+      </span>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- else %}
+  <ul class="member-grid">
+    {%- for person in group.people %}
+    {%- assign parts = person.name | split: " " %}
+    {%- assign n_talks = site.data.talks | where: "speaker", person.name | size %}
+    {%- assign hue = person.name.size | modulo: 6 %}
+    <li class="member-card" id="{{ person.name | slugify: 'latin' }}">
+      <span class="avatar avatar-{{ hue }}" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>
+      <div class="member-info">
+        <h3>{{ person.name }}</h3>
+        {%- if person.role %}<span class="role-badge">{{ person.role }}</span>{% endif %}
+        <p class="member-position">{{ person.position }}</p>
+        <p class="member-affiliation">{{ person.affiliation }} <span class="member-country">{{ person.country }}</span></p>
+        {%- if person.url or n_talks > 0 %}
+        <p class="member-links">
+          {%- if person.url %}
+          <a href="{{ person.url }}" target="_blank" rel="noopener">
+            {%- if person.url contains "lattes" %}Lattes CV{% elsif person.url contains "inspirehep" %}INSPIRE profile{% else %}Website{% endif -%}
+            {% include icon.html name="external" %}</a>
+          {%- endif %}
+          {%- if n_talks > 0 %}
+          <a href="{{ '/presentations/' | relative_url }}?speaker={{ person.name | url_encode }}">{{ n_talks }} talk{% if n_talks > 1 %}s{% endif %}</a>
+          {%- endif %}
+        </p>
+        {%- endif %}
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+</section>
+{% endfor %}
+
+<aside class="callout">
+  <h2>Join us</h2>
+  <p>We welcome prospective MSc/PhD students and postdoctoral researchers. See the <a href="{{ '/contact/' | relative_url }}#opportunities">contact page</a> for how to get in touch.</p>
+</aside>
