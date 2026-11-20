@@ -21,47 +21,21 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml
 
-      - name: Validate YAML data files
-        run: |
-          python -c '
-          import yaml
-          for path in ["_data/publications.yml", "_data/talks.yml"]:
-              with open(path, "r", encoding="utf-8") as f:
-                  data = yaml.safe_load(f)
-              print(f"✓ {path} is valid YAML ({len(data)} items)")
-          '
+      - name: Validate data files and conventions
+        run: python scripts/check_data.py
 
-  jekyll-build:
+  build-and-link-check:
     needs: data-check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Build with Jekyll
+      - name: Build with Jekyll (same builder as GitHub Pages)
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
 
-  link-check:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Check links in markdown
-        uses: lycheeverse/lychee-action@v2
-        with:
-          args: >-
-            --verbose
-            --offline
-            --base https://www.extreme-collaboration.science
-            --accept 200,206,301,302,307,308,403,429
-            --max-retries 2
-            --timeout 20
-            README.md MIGRATION_PLAN.md members.md contact.md simulation-chain.md wiki.md index.md publications.md presentations.md
-          fail: true
+      - name: Check internal links in the built site
+        run: python3 scripts/check_links.py _site

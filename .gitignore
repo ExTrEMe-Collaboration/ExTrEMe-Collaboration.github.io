@@ -1,0 +1,17 @@
+# Jekyll build output and caches
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Local Ruby environment
+Gemfile.lock
+vendor/
+.bundle/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
