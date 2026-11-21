@@ -1,0 +1,38 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        {% include logo.html id="footer" %}
+        <span class="brand-text">
+          <span class="brand-name">ExTrEMe</span>
+          <span class="brand-sub">Collaboration</span>
+        </span>
+      </a>
+      <p><strong>Ex</strong>periment and <strong>T</strong>heo<strong>r</strong>y in <strong>E</strong>xtreme <strong>M</strong>att<strong>e</strong>r — phenomenology of high-energy nuclear collisions, from initial conditions to final-state hadrons.</p>
+    </div>
+
+    <nav class="footer-col" aria-label="Footer">
+      <h2>Explore</h2>
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        {%- for item in site.data.navigation %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+
+    <div class="footer-col">
+      <h2>Get in touch</h2>
+      <ul>
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        <li><a href="https://github.com/{{ site.github_org }}" target="_blank" rel="noopener">GitHub organization</a></li>
+        <li><a href="https://github.com/{{ site.site_repository }}/issues" target="_blank" rel="noopener">Report a website issue</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-base">
+    <span>© {{ site.time | date: "%Y" }} The ExTrEMe Collaboration</span>
+    <span>Supported by FAPESP, CNPq and CAPES</span>
+  </div>
+</footer>

@@ -1,0 +1,11 @@
+# Main navigation (header and footer).
+- title: Members
+  url: /members/
+- title: Simulation chain
+  url: /simulation-chain/
+- title: Publications
+  url: /publications/
+- title: Presentations
+  url: /presentations/
+- title: Contact
+  url: /contact/

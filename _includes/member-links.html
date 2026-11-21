@@ -1,0 +1,15 @@
+{%- comment -%}
+  Profile links for one person from _data/members.yml (parameter: person).
+  Renders nothing when the person has no links and no presentations.
+{%- endcomment -%}
+{%- assign person = include.person -%}
+{%- assign n_talks = site.data.talks | where: "speaker", person.name | size -%}
+{%- if person.lattes or person.orcid or person.inspire or person.url or n_talks > 0 -%}
+<p class="member-links">
+  {%- if person.lattes %}<a href="{{ person.lattes }}" target="_blank" rel="noopener">Lattes</a>{% endif -%}
+  {%- if person.orcid %}<a href="https://orcid.org/{{ person.orcid }}" target="_blank" rel="noopener" title="ORCID {{ person.orcid }}">{% include icon.html name="orcid" %}ORCID</a>{% endif -%}
+  {%- if person.inspire %}<a href="{{ person.inspire }}" target="_blank" rel="noopener">INSPIRE</a>{% endif -%}
+  {%- if person.url %}<a href="{{ person.url }}" target="_blank" rel="noopener">Website</a>{% endif -%}
+  {%- if n_talks > 0 %}<a class="member-talks" href="{{ '/presentations/' | relative_url }}?speaker={{ person.name | url_encode }}">{{ n_talks }} presentation{% if n_talks > 1 %}s{% endif %}</a>{% endif -%}
+</p>
+{%- endif -%}

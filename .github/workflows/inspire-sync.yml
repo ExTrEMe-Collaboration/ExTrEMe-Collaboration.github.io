@@ -1,0 +1,93 @@
+# Once a month, refresh _data/publications.yml from INSPIRE-HEP and propose the
+# changes as a pull request for a maintainer to review (never merged automatically).
+#
+#   - --sync-all fills in journal references, DOIs and years of existing entries
+#     (e.g. a "Preprint" that has since been published);
+#   - the default mode adds new papers that INSPIRE tags with the ExTrEMe
+#     collaboration, to "ExTrEMe Collaboration Papers".
+#
+# A single pull request from the branch automation/inspire-sync is kept up to
+# date: if one is already open, it is updated instead of opening another.
+#
+# One-time setup in the repository: Settings → Actions → General → Workflow
+# permissions → tick "Allow GitHub Actions to create and approve pull requests".
+# It can also be run by hand from the Actions tab ("Run workflow").
+name: INSPIRE sync
+
+on:
+  schedule:
+    - cron: "23 5 2 * *"   # 05:23 UTC on the 2nd of every month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: inspire-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    # Scheduled runs only in the collaboration's repository; manual runs anywhere.
+    if: github.event_name == 'workflow_dispatch' || github.repository_owner == 'ExTrEMe-Collaboration'
+    runs-on: ubuntu-latest
+    env:
+      BRANCH: automation/inspire-sync
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Refresh existing entries and look for new collaboration papers
+        run: |
+          set -o pipefail   # fail the run if INSPIRE-HEP cannot be reached
+          python scripts/update_publications_from_inspirehep.py --sync-all 2>&1 | tee sync.log
+          python scripts/update_publications_from_inspirehep.py 2>&1 | tee -a sync.log
+
+      - name: Validate the data
+        run: python scripts/check_data.py
+
+      - name: Open or update the pull request
+        run: |
+          if git diff --quiet -- _data/publications.yml; then
+            echo "Publications are already in sync with INSPIRE-HEP; nothing to propose."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C "$BRANCH"
+          git add _data/publications.yml
+          git commit -m "Sync publications with INSPIRE-HEP ($(date -u +%Y-%m-%d))"
+          git push --force origin "$BRANCH"
+
+          {
+            echo "Automatic monthly sync of \`_data/publications.yml\` with INSPIRE-HEP."
+            echo
+            echo "**Please review the diff before merging**: check that new papers belong on the site and are in the right category, and that author lists and venues look right."
+            echo
+            echo "The data check already passed in this run. Pull requests opened by GitHub Actions do not start the *Site Checks* workflow by themselves: close and reopen this pull request (or push a commit to it) to run them."
+            echo
+            echo "<details><summary>Sync log</summary>"
+            echo
+            echo '```'
+            cat sync.log
+            echo '```'
+            echo "</details>"
+          } > pr-body.md
+
+          if [ -n "$(gh pr list --head "$BRANCH" --state open --json number --jq '.[].number')" ]; then
+            gh pr edit "$BRANCH" --body-file pr-body.md
+            echo "Updated the open pull request."
+          else
+            gh pr create --base "${{ github.event.repository.default_branch }}" --head "$BRANCH" \
+              --title "Monthly INSPIRE-HEP sync of publications" --body-file pr-body.md
+          fi

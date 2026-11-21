@@ -1,0 +1,182 @@
+---
+layout: default
+body_class: page-home
+scripts:
+  - /assets/js/collision.js
+---
+{%- assign member_count = 0 -%}
+{%- for group in site.data.members -%}
+  {%- unless group.alumni -%}{%- assign member_count = member_count | plus: group.people.size -%}{%- endunless -%}
+{%- endfor -%}
+{%- comment -%} "Papers" counts only the collaboration's own papers {%- endcomment -%}
+{%- assign collab_papers = site.data.publications | where: "category", "ExTrEMe Collaboration Papers" | first -%}
+{%- assign paper_count = collab_papers.items.size -%}
+{%- assign countries = site.data.institutions | map: "country" | uniq -%}
+
+<section class="hero">
+  <canvas class="hero-canvas" data-collision aria-hidden="true"></canvas>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <p class="eyebrow eyebrow-hot">The ExTrEMe Collaboration</p>
+    <h1 class="hero-title">
+      <span class="acro">Ex</span>periment and <span class="acro">T</span>heo<span class="acro">r</span>y in <span class="acro">E</span>xtreme <span class="acro">M</span>att<span class="acro">e</span>r
+    </h1>
+    <p class="hero-lead">
+      An international group of researchers investigating the phenomenology of high-energy
+      nuclear collisions — bridging QCD theory and relativistic hydrodynamics with
+      measurements at RHIC and the LHC.
+    </p>
+    <div class="hero-actions">
+      <a class="button button-hot" href="#research">Explore our research {% include icon.html name="arrow" %}</a>
+      <a class="button button-ghost" href="{{ '/publications/' | relative_url }}">Publications</a>
+    </div>
+
+    <dl class="hero-stats">
+      <div><dt>Researchers</dt><dd>{{ member_count }}</dd></div>
+      <div><dt>Institutions</dt><dd>{{ site.data.institutions.size }}<small> in {{ countries.size }} countries</small></dd></div>
+      <div><dt>Papers</dt><dd>{{ paper_count }}</dd></div>
+      <div><dt>Presentations</dt><dd>{{ site.data.talks.size }}</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section" id="research">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Research scope</p>
+      <h2>Following a nuclear collision, stage by stage</h2>
+      <p>Our research spans the theoretical description and numerical simulation of matter under extreme conditions of temperature and density — from the first femtoseconds of a collision to the hadrons that reach the detectors.</p>
+    </header>
+
+    <ol class="scope-grid">
+      <li class="scope-card" style="--stage: var(--stage-ic)">
+        <span class="scope-num">01</span>
+        <h3>Initial conditions &amp; pre-equilibrium</h3>
+        <p>Fluctuating nuclear geometry, non-conformal energy deposition, and pre-hydrodynamic kinetic equilibration before hydrodynamic thermalization.</p>
+      </li>
+      <li class="scope-card" style="--stage: var(--stage-hydro)">
+        <span class="scope-num">02</span>
+        <h3>Relativistic viscous hydrodynamics</h3>
+        <p>(3+1)D relativistic fluid dynamics with shear and bulk viscosities, causality constraints, attractors, and novel formulations (BDNK, Israel–Stewart).</p>
+      </li>
+      <li class="scope-card" style="--stage: var(--stage-cascade)">
+        <span class="scope-num">03</span>
+        <h3>Particlization &amp; hadronic cascade</h3>
+        <p>Cooper–Frye freeze-out with viscous momentum corrections, coupled to microscopic transport (UrQMD) for hadronic rescattering and decays.</p>
+      </li>
+      <li class="scope-card" style="--stage: var(--stage-bayes)">
+        <span class="scope-num">04</span>
+        <h3>Bayesian inference &amp; emulation</h3>
+        <p>Constraining temperature-dependent QGP transport coefficients (<i>η</i>/<i>s</i>(<i>T</i>), <i>ζ</i>/<i>s</i>(<i>T</i>)), the equation of state, and initial-state parameters through Bayesian parameter estimation.</p>
+      </li>
+      <li class="scope-card" style="--stage: var(--stage-obs)">
+        <span class="scope-num">05</span>
+        <h3>Observables &amp; model-to-data comparison</h3>
+        <p>Anisotropic flow (<i>v</i><sub><i>n</i></sub>), transverse-momentum (<i>p</i><sub>T</sub>) spectra shapes, flow fluctuations, vorticity rings and hyperon polarization at RHIC and the LHC.</p>
+      </li>
+      <li class="scope-card scope-card-cta">
+        <a href="{{ '/simulation-chain/' | relative_url }}">
+          <span class="scope-num">→</span>
+          <h3>See how the stages connect</h3>
+          <p>Our multi-stage simulation chain: TRENTo, KoMPoST, MUSIC, iSS and UrQMD.</p>
+          <span class="link-arrow">The simulation chain {% include icon.html name="arrow" %}</span>
+        </a>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container latest-grid">
+    <div class="latest-col">
+      <header class="section-head section-head-sm">
+        <p class="eyebrow">Latest</p>
+        <h2>Recent papers</h2>
+      </header>
+      {%- assign collab = site.data.publications | where: "category", "ExTrEMe Collaboration Papers" | first -%}
+      {%- assign recent_pubs = collab.items | sort: "year" | reverse -%}
+      <ol class="pub-list pub-list-compact">
+        {%- for p in recent_pubs limit: 4 %}
+        {% include publication.html pub=p category=collab.category %}
+        {%- endfor %}
+      </ol>
+      <a class="link-arrow" href="{{ '/publications/' | relative_url }}">All publications {% include icon.html name="arrow" %}</a>
+    </div>
+
+    <div class="latest-col">
+      <header class="section-head section-head-sm">
+        <p class="eyebrow">On the road</p>
+        <h2>Recent presentations</h2>
+      </header>
+      {%- assign recent_talks = site.data.talks | sort: "date" | reverse -%}
+      <ol class="talk-list talk-list-compact">
+        {%- for t in recent_talks limit: 5 %}
+        {% include talk.html talk=t show_year=true %}
+        {%- endfor %}
+      </ol>
+      <a class="link-arrow" href="{{ '/presentations/' | relative_url }}">All presentations {% include icon.html name="arrow" %}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">Network</p>
+      <h2>Participating institutions</h2>
+    </header>
+    {%- assign brazil = site.data.institutions | where: "country", "Brazil" -%}
+    {%- assign abroad = site.data.institutions | where_exp: "i", "i.country != 'Brazil'" -%}
+    <div class="inst-grid">
+      <div class="inst-card inst-card-main">
+        <h3>Brazil <span class="count">{{ brazil.size }}</span></h3>
+        <ul class="inst-list">
+          {%- for i in brazil %}
+          <li><span class="inst-short">{{ i.short }}</span><span class="inst-name">{{ i.name }}</span><span class="inst-city">{{ i.city }}</span></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div class="inst-card">
+        <h3>International <span class="count">{{ abroad.size }}</span></h3>
+        <ul class="inst-list">
+          {%- for i in abroad %}
+          <li><span class="inst-short">{{ i.short }}</span><span class="inst-name">{{ i.name }}</span><span class="inst-city">{{ i.city }}, {{ i.country }}</span></li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-support">
+  <div class="container support-inner">
+    <header class="section-head">
+      <p class="eyebrow">Support &amp; acknowledgments</p>
+      <h2>Funded by</h2>
+      <p>Research conducted by the ExTrEMe collaboration is supported by the following agencies, and by partner universities and host institutions worldwide.</p>
+    </header>
+    <ul class="funders">
+      <li>
+        <a href="https://fapesp.br/" target="_blank" rel="noopener"><strong>FAPESP</strong></a>
+        <span>São Paulo Research Foundation</span>
+        {%- comment -%}
+          Maintainers: 2017/04616-7 is listed because the legacy site
+          (sites.ifi.unicamp.br/extreme) named it as "FAPESP temático grant 2017/04616-7".
+          It is NOT verified: no paper indexed by INSPIRE-HEP acknowledges that number,
+          whereas 2017/05685-2 and 2023/13749-1 appear in 111 and 43 papers (Nov 2026).
+          Confirm it with the coordinators and update or remove it; see the to-do in
+          MIGRATION_PLAN.md.
+        {%- endcomment %}
+        <small>Thematic projects 2017/05685-2 and 2023/13749-1, grant 2017/04616-7, and subsequent research grants</small>
+      </li>
+      <li>
+        <a href="https://www.gov.br/cnpq/" target="_blank" rel="noopener"><strong>CNPq</strong></a>
+        <span>National Council for Scientific and Technological Development</span>
+      </li>
+      <li>
+        <a href="https://www.gov.br/capes/" target="_blank" rel="noopener"><strong>CAPES</strong></a>
+        <span>Coordination for the Improvement of Higher Education Personnel</span>
+      </li>
+    </ul>
+  </div>
+</section>

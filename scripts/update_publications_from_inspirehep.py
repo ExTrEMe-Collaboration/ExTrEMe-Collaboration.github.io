@@ -50,6 +50,22 @@ def clean_latex(text):
     text = re.sub(r"<[^>]+>", "", text)
     return " ".join(text.split())
 
+def format_author(full_name):
+    """Turn INSPIRE's "Last, First Middle" into "F. M. Last"."""
+    if not full_name:
+        return ""
+    if "," not in full_name:
+        return full_name.strip()
+    last, first = [x.strip() for x in full_name.split(",", 1)]
+    initials = []
+    for part in first.replace(".", ". ").split():
+        if part.endswith(".") and len(part) <= 3:
+            initials.append(part)  # already abbreviated, e.g. "Ph."
+            continue
+        # keep hyphenated initials such as "X.-G."
+        initials.append("-".join(f"{p[0]}." for p in part.split("-") if p))
+    return " ".join(initials + [last])
+
 def parse_inspire_record(record):
     """Extract publication info from INSPIREHEP record."""
     metadata = record.get("metadata", {})
@@ -59,22 +75,21 @@ def parse_inspire_record(record):
     if "titles" in metadata and metadata["titles"]:
         title = clean_latex(metadata["titles"][0].get("title", ""))
 
-    # Authors
+    # Authors: "F. M. Last" style. Up to 3 authors are listed in full
+    # ("A and B", "A, B, and C"); longer lists become "F. M. Last et al.".
     authors = ""
     if "authors" in metadata and metadata["authors"]:
-        author_names = [a.get("full_name") for a in metadata["authors"] if a.get("full_name")]
-        if author_names:
-            # Format as First Initial. Last or standard list
-            authors = ", ".join(author_names)
-            if len(author_names) > 3:
-                # E.g. "T. S. Domingues et al."
-                first = author_names[0]
-                if "," in first:
-                    last, first_name = [x.strip() for x in first.split(",", 1)]
-                    initials = " ".join([f"{part[0]}." for part in first_name.split() if part])
-                    authors = f"{initials} {last} et al."
-                else:
-                    authors = f"{first} et al."
+        author_names = []
+        for a in metadata["authors"]:
+            name = format_author(a.get("full_name"))
+            if name and name not in author_names:  # INSPIRE sometimes duplicates authors
+                author_names.append(name)
+        if len(author_names) > 3:
+            authors = f"{author_names[0]} et al."
+        elif len(author_names) == 3:
+            authors = f"{author_names[0]}, {author_names[1]}, and {author_names[2]}"
+        else:
+            authors = " and ".join(author_names)
 
     # Year
     year = None
@@ -108,7 +123,9 @@ def parse_inspire_record(record):
         pub_info = metadata["publication_info"][0]
         journal_title = pub_info.get("journal_title")
         if journal_title:
-            venue = journal_title
+            # Site convention: "Phys. Rev. C 110, 064904 (2024)"
+            # (INSPIRE writes "Phys.Rev.C"; add the spaces back.)
+            venue = re.sub(r"\.(?=\S)", ". ", journal_title)
             # Note: Inspire uses 'journal_volume', not 'volume'
             volume = pub_info.get("journal_volume") or pub_info.get("volume")
             if volume:
@@ -116,6 +133,8 @@ def parse_inspire_record(record):
             artid = pub_info.get("artid") or pub_info.get("page_start")
             if artid:
                 venue += f", {artid}"
+            if pub_info.get("year"):
+                venue += f" ({pub_info['year']})"
         elif "conference_record" in pub_info:
             venue = pub_info.get("conference_record", {}).get("name", "")
         elif pub_info.get("pubinfo_freetext"):
@@ -218,6 +237,13 @@ def update_publications(hits, dry_run=False, category_name="ExTrEMe Collaboratio
             # Append collaboration tag if adding to ExTrEMe collaboration papers
             if "ExTrEMe" in category_name and "(The ExTrEMe Collaboration)" not in entry.get("authors", ""):
                 entry["authors"] = entry.get("authors", "") + " (The ExTrEMe Collaboration)"
+
+            # Not published yet: use the site's "Preprint" venue (replaced by
+            # --sync-all once INSPIRE has the journal reference), in site key order.
+            if not entry.get("venue"):
+                entry["venue"] = "Preprint"
+            order = ["year", "title", "authors", "venue", "doi", "arxiv"]
+            entry = {k: entry[k] for k in order if k in entry}
 
             target_cat = None
             for cat in yaml_data:

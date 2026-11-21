@@ -1,0 +1,41 @@
+# Participating institutions, shown on the home page grouped by country.
+- name: Universidade de São Paulo
+  short: USP
+  city: São Paulo
+  country: Brazil
+- name: Universidade Estadual de Campinas
+  short: Unicamp
+  city: Campinas
+  country: Brazil
+- name: Universidade Federal Fluminense
+  short: UFF
+  city: Niterói
+  country: Brazil
+- name: Universidade Federal de Santa Catarina
+  short: UFSC
+  city: Florianópolis
+  country: Brazil
+- name: Universidade Federal de Alfenas
+  short: UNIFAL
+  city: Alfenas
+  country: Brazil
+- name: Universidade Federal da Grande Dourados
+  short: UFGD
+  city: Dourados
+  country: Brazil
+- name: Universidade do Estado do Rio de Janeiro
+  short: UERJ
+  city: Rio de Janeiro
+  country: Brazil
+- name: University of Illinois Urbana-Champaign
+  short: UIUC
+  city: Urbana, IL
+  country: USA
+- name: Stefan Meyer Institute for Subatomic Physics (ÖAW)
+  short: SMI
+  city: Vienna
+  country: Austria
+- name: Frankfurt Institute for Advanced Studies
+  short: FIAS
+  city: Frankfurt am Main
+  country: Germany

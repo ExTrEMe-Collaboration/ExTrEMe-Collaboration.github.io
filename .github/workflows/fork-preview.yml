@@ -1,0 +1,73 @@
+# Publishes a preview of the site from a personal fork to
+#   https://<your-user>.github.io/<fork-name>/
+# without touching the collaboration's custom domain.
+#
+# It is opt-in and never runs in repositories owned by the ExTrEMe-Collaboration
+# organization, so it is safe to merge upstream. To use it in your fork:
+#   1. Settings → Pages → Build and deployment → Source: "GitHub Actions".
+#   2. Settings → Secrets and variables → Actions → Variables → New repository
+#      variable: PAGES_PREVIEW = true
+#   3. Push to any branch (or run it manually from the Actions tab).
+#   4. To deploy from a branch other than your default branch, allow it under
+#      Settings → Environments → github-pages → Deployment branches and tags.
+name: Fork preview
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: fork-preview
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.repository_owner != 'ExTrEMe-Collaboration' && vars.PAGES_PREVIEW == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Serve from this fork's github.io address
+        run: |
+          # The production config targets the custom domain at the site root.
+          # For the preview, point url/baseurl at <user>.github.io/<repo>/ and
+          # drop the CNAME so the custom domain is never claimed by the fork.
+          sed -i \
+            -e 's|^baseurl:.*|baseurl: "${{ steps.pages.outputs.base_path }}"|' \
+            -e 's|^url:.*|url: "${{ steps.pages.outputs.origin }}"|' \
+            _config.yml
+          rm -f CNAME
+          grep -E '^(url|baseurl):' _config.yml
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Check internal links
+        run: python3 scripts/check_links.py _site --baseurl "${{ steps.pages.outputs.base_path }}"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

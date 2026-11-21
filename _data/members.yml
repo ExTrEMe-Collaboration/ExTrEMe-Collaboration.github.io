@@ -1,0 +1,178 @@
+# Collaboration roster, rendered on /members/.
+#
+# `name` is the canonical spelling used everywhere on the site: speakers in
+# _data/talks.yml must match one of these names exactly to be linked.
+#
+# Fields per person:
+#   name:        Canonical full name.
+#   position:    Short position label (e.g. "Professor", "PhD student", "PhD 2023").
+#   affiliation: Institution name, with acronym in parentheses.
+#   country:     Country of the affiliation.
+#   lattes:      (optional) Lattes CV link, https://lattes.cnpq.br/<16 digits>
+#   orcid:       (optional) ORCID iD only, e.g. 0000-0002-4091-1779
+#   inspire:     (optional) INSPIRE-HEP author profile link
+#   url:         (optional) Personal or group web page
+#   role:        (optional) Collaboration role, highlighted on the card.
+
+- group: Faculty & Coordinators
+  id: faculty
+  people:
+    - name: David D. Chinellato
+      position: Professor
+      affiliation: Stefan Meyer Institute for Subatomic Physics (ÖAW), Vienna
+      country: Austria
+      lattes: https://lattes.cnpq.br/2080099102941335
+      orcid: 0000-0002-9982-9577
+      inspire: https://inspirehep.net/authors/1068525
+    - name: Gabriel S. Denicol
+      position: Professor
+      affiliation: Universidade Federal Fluminense (UFF)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/1823949676739992
+      orcid: 0000-0002-8395-9756
+      inspire: https://inspirehep.net/authors/1037027
+    - name: Fernando Gardim
+      position: Professor
+      affiliation: Universidade Federal de Alfenas (UNIFAL)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/2425549033248106
+      orcid: 0000-0002-4838-1469
+      inspire: https://inspirehep.net/authors/1052935
+    - name: Andre V. Giannini
+      position: Professor
+      affiliation: Universidade Federal da Grande Dourados (UFGD)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/2669085919057438
+      orcid: 0000-0003-0123-6472
+      inspire: https://inspirehep.net/authors/1259271
+    - name: Matthew Luzum
+      position: Professor
+      affiliation: Universidade de São Paulo (USP)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/3672547273353904
+      orcid: 0000-0002-0367-7055
+      inspire: https://inspirehep.net/authors/1054209
+      role: Collaboration Coordinator
+    - name: Jorge Noronha
+      position: Professor
+      affiliation: University of Illinois Urbana-Champaign (UIUC)
+      country: USA
+      lattes: https://lattes.cnpq.br/8775304977333608
+      orcid: 0000-0002-9817-0272
+      inspire: https://inspirehep.net/authors/1028825
+    - name: Tiago Nunes da Silva
+      position: Professor
+      affiliation: Universidade Federal de Santa Catarina (UFSC)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/6029696722164198
+      orcid: 0000-0001-8044-4055
+      inspire: https://inspirehep.net/authors/1256848
+    - name: Mauricio Hippert
+      position: Professor
+      affiliation: Universidade do Estado do Rio de Janeiro (UERJ)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/0055928814441454
+      orcid: 0000-0001-5802-3908
+      inspire: https://inspirehep.net/authors/1635809
+    - name: Gabriel S. Rocha
+      position: Professor
+      affiliation: Universidade Federal Fluminense (UFF)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/8012194884198562
+      orcid: 0000-0001-7190-8137
+      inspire: https://inspirehep.net/authors/2115760
+    - name: Jun Takahashi
+      position: Professor
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/7057603141934226
+      orcid: 0000-0002-4091-1779
+      inspire: https://inspirehep.net/authors/1030144
+    - name: Giorgio Torrieri
+      position: Professor
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/9839588082439361
+      orcid: 0000-0002-0611-766X
+      inspire: https://inspirehep.net/authors/985812
+
+- group: Postdoctoral Researchers
+  id: postdocs
+  people:
+    - name: Osvaldo F. Neto
+      position: Postdoc
+      affiliation: Universidade de São Paulo (USP)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/6790966492250263
+      orcid: 0000-0002-6711-8308
+      inspire: https://inspirehep.net/authors/2698690
+    - name: Rajeev Singh
+      position: Postdoc
+      affiliation: Frankfurt Institute for Advanced Studies (FIAS)
+      country: Germany
+      orcid: 0000-0001-5855-4039
+      inspire: https://inspirehep.net/authors/1629845
+
+- group: Graduate Students
+  id: students
+  people:
+    - name: Giuliano Dias
+      position: PhD student
+      affiliation: Universidade de São Paulo (USP)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/1230359131969219
+      orcid: 0009-0007-7397-9087
+    - name: Thiago S. Domingues
+      position: PhD student
+      affiliation: Universidade de São Paulo (USP)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/4092459866318436
+      orcid: 0000-0001-6756-8600
+      inspire: https://inspirehep.net/authors/2719246
+    - name: Cicero D. Muncinelli
+      position: PhD student
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/8192066238557675
+      orcid: 0000-0003-0076-3852
+      inspire: https://inspirehep.net/authors/3098259
+    - name: Eduardo Oliveira Pinho
+      position: PhD student
+      affiliation: Universidade Federal de Santa Catarina (UFSC)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/0294317828319960
+      orcid: 0009-0003-3144-8625
+      inspire: https://inspirehep.net/authors/2654762
+    - name: Renata Krupczak
+      position: PhD student / Researcher
+      affiliation: Universidade Federal de Santa Catarina (UFSC) / Bielefeld University
+      country: Brazil / Germany
+      lattes: https://lattes.cnpq.br/4853475854535800
+      orcid: 0000-0002-8867-9702
+      inspire: https://inspirehep.net/authors/1869470
+
+- group: Alumni & Former Members
+  id: alumni
+  alumni: true
+  people:
+    - name: Willian M. Serenone
+      position: Former postdoc
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/3286464028110773
+      orcid: 0000-0002-9873-9713
+      inspire: https://inspirehep.net/authors/1844704
+    - name: Antonio M. S. N. Ferreira
+      position: Former postdoc
+      affiliation: University of Valencia
+      country: Spain
+      lattes: https://lattes.cnpq.br/3311487873554788
+      orcid: 0000-0003-2802-5296
+      inspire: https://inspirehep.net/authors/1751821
+    - name: João Guilherme Prado Barbon
+      position: MSc 2021
+      affiliation: Universidade Estadual de Campinas (Unicamp)
+      country: Brazil
+      lattes: https://lattes.cnpq.br/5920502849461306
+      orcid: 0000-0003-0486-3156
+      inspire: https://inspirehep.net/authors/1879082

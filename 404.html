@@ -1,0 +1,16 @@
+---
+title: Page not found
+permalink: /404.html
+eyebrow: Error 404
+lead: This page escaped the fireball before freeze-out. It may have moved, or the link may be outdated.
+sitemap: false
+---
+<div class="not-found">
+  <p>Try one of these instead:</p>
+  <ul class="not-found-links">
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    {%- for item in site.data.navigation %}
+    <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+    {%- endfor %}
+  </ul>
+</div>

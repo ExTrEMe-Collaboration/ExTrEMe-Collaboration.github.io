@@ -1,12 +1,12 @@
 ---
-layout: page
 title: Wiki
 permalink: /wiki/
+eyebrow: Internal
+lead: Collaboration-internal documentation that benefits from version control.
+sitemap: false
 ---
 
-This wiki section is intended for collaboration-internal documentation that benefits from version control.
-
-## Suggested Wiki Sections
+## Suggested wiki sections
 
 - Onboarding
 - Computing setup
@@ -16,7 +16,7 @@ This wiki section is intended for collaboration-internal documentation that bene
 - Publication and internal review workflow
 - Collaboration meeting notes
 
-## Recommended Workflow
+## Recommended workflow
 
 - Keep operational documentation in Markdown files in this repository
 - Use pull requests for updates

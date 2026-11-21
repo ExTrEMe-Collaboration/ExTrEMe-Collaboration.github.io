@@ -1,0 +1,53 @@
+---
+title: Members
+permalink: /members/
+eyebrow: People
+lead: Faculty, postdoctoral researchers and students working together on the phenomenology of high-energy nuclear collisions.
+wide: true
+---
+<nav class="pill-nav" aria-label="Member groups">
+  {%- for group in site.data.members %}
+  <a href="#{{ group.id }}">{{ group.group }} <span class="count">{{ group.people.size }}</span></a>
+  {%- endfor %}
+</nav>
+
+{% for group in site.data.members %}
+<section class="member-group" id="{{ group.id }}">
+  <h2>{{ group.group }}</h2>
+
+  {%- if group.alumni %}
+  <ul class="alumni-list">
+    {%- for person in group.people %}
+    <li id="{{ person.name | slugify: 'latin' }}">
+      <span class="alumni-name">{{ person.name }}</span>
+      <span class="alumni-position">{{ person.position }}</span>
+      <span class="alumni-affiliation">{{ person.affiliation }}</span>
+      {% include member-links.html person=person %}
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- else %}
+  <ul class="member-grid">
+    {%- for person in group.people %}
+    {%- assign parts = person.name | split: " " %}
+    {%- assign hue = person.name.size | modulo: 6 %}
+    <li class="member-card" id="{{ person.name | slugify: 'latin' }}">
+      <span class="avatar avatar-{{ hue }}" aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>
+      <div class="member-info">
+        <h3>{{ person.name }}</h3>
+        {%- if person.role %}<span class="role-badge">{{ person.role }}</span>{% endif %}
+        <p class="member-position">{{ person.position }}</p>
+        <p class="member-affiliation">{{ person.affiliation }} <span class="member-country">{{ person.country }}</span></p>
+        {% include member-links.html person=person %}
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+</section>
+{% endfor %}
+
+<aside class="callout">
+  <h2>Join us</h2>
+  <p>We welcome prospective MSc/PhD students and postdoctoral researchers. See the <a href="{{ '/contact/' | relative_url }}#opportunities">contact page</a> for how to get in touch.</p>
+</aside>

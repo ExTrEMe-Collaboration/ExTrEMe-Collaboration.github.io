@@ -1,0 +1,72 @@
+---
+title: Simulation Chain
+permalink: /simulation-chain/
+eyebrow: Research infrastructure
+lead: A multi-stage pipeline that models relativistic heavy-ion collisions from the earliest collision geometry, through hydrodynamic expansion, to final-state particle spectra and correlations.
+---
+<figure class="figure figure-diagram">
+  <a href="{{ '/assets/images/simulation_chain.png' | relative_url }}" target="_blank" rel="noopener">
+    <img src="{{ '/assets/images/simulation_chain.png' | relative_url }}" width="3188" height="2834" loading="lazy"
+         alt="Block diagram of the ExTrEMe hydro simulation chain: TRENTo, KoMPoST, MUSIC, iSS, format converters and UrQMD, next to an alternative PYTHIA Angantyr baseline without QGP.">
+  </a>
+  <figcaption>The ExTrEMe multi-stage simulation chain (left) and the PYTHIA/Angantyr baseline without the QGP assumption (right). Click to enlarge.</figcaption>
+</figure>
+
+<h2 class="section-title">Pipeline overview</h2>
+<p>The framework models the collision through distinct physical stages, connecting microscopic dynamics with macroscopic collective expansion.</p>
+
+<ol class="stages">
+  <li class="stage" style="--stage: var(--stage-ic)">
+    <span class="stage-num">1</span>
+    <div class="stage-body">
+      <h3>Initial state &amp; geometry</h3>
+      <p><a class="code-chip" href="https://github.com/Duke-QCD/trento" target="_blank" rel="noopener">TRENTo</a> A phenomenological initial-condition generator implementing an effective generalized-mean ansatz for energy and entropy deposition in heavy-ion collisions.</p>
+      <p><a class="code-chip" href="https://pythia.org/" target="_blank" rel="noopener">PYTHIA / Angantyr</a> For baseline calculations without the assumption of a quark-gluon plasma (QGP) core, collisions are modeled with the Angantyr model, based on the PYTHIA Lund string fragmentation framework.</p>
+    </div>
+  </li>
+  <li class="stage" style="--stage: var(--stage-ic)">
+    <span class="stage-num">2</span>
+    <div class="stage-body">
+      <h3>Pre-equilibrium dynamics</h3>
+      <p><a class="code-chip" href="https://github.com/KMPST/KoMPoST" target="_blank" rel="noopener">KoMPoST</a> Bridges the early collision geometry with viscous hydrodynamics by evolving energy-momentum tensor perturbations <i>T</i><sup><i>μν</i></sup> using kinetic theory, providing consistent hydrodynamic initial conditions at the initialization time <i>τ</i><sub>hydro</sub>.</p>
+    </div>
+  </li>
+  <li class="stage" style="--stage: var(--stage-hydro)">
+    <span class="stage-num">3</span>
+    <div class="stage-body">
+      <h3>Relativistic viscous hydrodynamics</h3>
+      <p><a class="code-chip" href="https://github.com/MUSIC-fluid/MUSIC" target="_blank" rel="noopener">MUSIC</a> A (3+1)D relativistic viscous hydrodynamics code that solves energy-momentum conservation together with relaxation equations for the shear-stress tensor <i>π</i><sup><i>μν</i></sup> and the bulk viscous pressure <i>Π</i>. It evolves the expanding quark-gluon plasma until local temperatures drop below the pseudo-critical transition temperature, extracting a freeze-out hypersurface.</p>
+    </div>
+  </li>
+  <li class="stage" style="--stage: var(--stage-hydro)">
+    <span class="stage-num">4</span>
+    <div class="stage-body">
+      <h3>Particlization</h3>
+      <p><a class="code-chip" href="https://github.com/chunshen1987/iSS" target="_blank" rel="noopener">iSS</a> A Monte Carlo particle sampler implementing the Cooper–Frye formalism on the freeze-out surface, converting continuous fluid fields into individual hadrons with viscous corrections to the momentum distributions.</p>
+    </div>
+  </li>
+  <li class="stage" style="--stage: var(--stage-cascade)">
+    <span class="stage-num">5</span>
+    <div class="stage-body">
+      <h3>Hadronic cascade &amp; decays</h3>
+      <p><a class="code-chip" href="https://urqmd.org/" target="_blank" rel="noopener">UrQMD</a> Simulates microscopic hadronic transport — elastic and inelastic rescattering and resonance decays — in the dilute hadronic phase. The pipeline supports two modes:</p>
+      <ul class="stage-modes">
+        <li style="--mode: var(--stage-decay)"><strong>Decays only</strong> — isolates freeze-out signatures from the subsequent hadronic evolution.</li>
+        <li style="--mode: var(--stage-cascade)"><strong>Decays and interactions</strong> — full transport, modeling hadronic medium effects.</li>
+      </ul>
+    </div>
+  </li>
+  <li class="stage" style="--stage: var(--stage-conv)">
+    <span class="stage-num">6</span>
+    <div class="stage-body">
+      <h3>Analysis &amp; model-to-data comparison</h3>
+      <p><span class="code-chip">oscarToHadrex</span> <span class="code-chip">ThirteenToHadrex</span> Format converters producing ROOT analysis trees, from which we extract observables including anisotropic flow coefficients (<i>v</i><sub><i>n</i></sub>), momentum-dependent flow fluctuations and scaled transverse-momentum spectra, and perform Bayesian model-to-data parameter estimation.</p>
+    </div>
+  </li>
+</ol>
+
+<figure class="figure figure-animation">
+  <img src="{{ '/assets/images/spacetime_particles.gif' | relative_url }}" width="698" height="474" loading="lazy"
+       alt="Animated plot of particle positions projected on the XZ plane as a simulated collision evolves in time.">
+  <figcaption>Particle positions projected on the reaction (<i>x</i>–<i>z</i>) plane as a simulated collision evolves, from the hybrid simulation chain.</figcaption>
+</figure>
