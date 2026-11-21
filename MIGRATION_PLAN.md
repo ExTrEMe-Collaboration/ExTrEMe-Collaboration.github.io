@@ -9,38 +9,41 @@ Last reviewed: November 2026.
 - [x] Content migrated from the legacy WordPress site (`sites.ifi.unicamp.br/extreme`): members, simulation chain, the full list of presentations (72), publications and theses (44 after the membership audit below).
 - [x] Structured data in `_data/` with documented conventions (`_data/README.md`) and automatic validation (`scripts/check_data.py`).
 - [x] Presentations and publications pages with search and filters (type, speaker, category).
-- [x] ORCID iDs and Lattes CVs on the Members page (verified against INSPIRE-HEP, the ORCID registry, the HADREX member list and the members themselves). R. Krupczak's INSPIRE link pointed to another person's profile and was corrected.
+- [x] Lattes, ORCID and INSPIRE-HEP links on the Members page. ORCID iDs verified in the ORCID registry; INSPIRE profiles matched by ORCID (on the profile, or on the author entries of the person's papers), not by name. R. Krupczak's INSPIRE link pointed to another person's profile and was corrected. G. Dias has no INSPIRE profile yet.
 - [x] CI: data validation, Jekyll build, internal link check.
+- [x] Monthly INSPIRE-HEP sync (`.github/workflows/inspire-sync.yml`): proposes updated journal references and new collaboration papers as a pull request.
 - [x] Social-preview metadata, image alt texts, colour contrast checked against WCAG AA, dark mode.
 - [x] Contribution guide for non-specialists (top of `README.md`) and maintainer notes in each folder.
 - [x] Fork preview workflow for testing changes on GitHub Pages.
 - [x] **Membership audit** (November 2026): every person on the Members page was checked against the author lists of every paper on the site and against the legacy ExTrEMe members page. Six people listed as alumni, and their theses, were removed: they were never ExTrEMe members. They had been added because, when the legacy site was scraped, the ExTrEMe pages and the pages of the HADREX group (same server, overlapping people) were read together and their member and thesis lists merged by mistake. Co-authors of collaboration papers who were never members are not listed either. The collaboration paper arXiv:2611.18290 was added.
+- [x] **Presentations**: every presentation listed on the legacy ExTrEMe page is kept, including three given by non-members (marked `external: true` in `_data/talks.yml`).
+- [x] **Slides on the legacy server**: eight presentation links point to PDFs on `sites.ifi.unicamp.br` (all reachable in November 2026). They stay linked there rather than copied into this repository (87 MB, mostly two files).
 
-## Open — content (needs a decision or information from members)
+## Open — to check or decide
 
-- [ ] **Missing identifiers.** Lattes and ORCID for Eduardo Oliveira Pinho.
-- [ ] **Presentations by non-members.** Three presentations from the legacy ExTrEMe list were given by people who are not members (marked `external: true` in `_data/talks.yml`): C. Bierlich (SQM 2019), L. Lober (Initial Stages 2021 poster) and an ENFPC 2022 talk by a former HADREX student. Keep them, or list only presentations by members?
+- [ ] **Verify FAPESP grant 2017/04616-7.** The legacy home page lists it as "FAPESP temático grant 2017/04616-7", so it is shown on the home page, but no paper indexed by INSPIRE-HEP acknowledges that number (2017/05685-2 and 2023/13749-1 appear in 111 and 43 papers). FAPESP's online library could not be searched automatically. Confirm with the coordinators, then correct or remove it in `index.html` (a maintainer comment marks the spot).
+- [ ] **Protect `main`** in the collaboration repository (to discuss with M. Luzum): require pull requests and the *Site Checks* status before merging. GitHub Pages publishes `main` regardless of the checks.
+- [ ] **Enable the monthly INSPIRE sync** in the collaboration repository: *Settings → Actions → General → Workflow permissions → Allow GitHub Actions to create and approve pull requests*. Decide who reviews its pull requests (and contributions in general).
 - [ ] **One presentation without title**: J. Noronha at WWND 2019 (not on BNL's Indico; the legacy slide link is dead; ask him). His Initial Stages 2019 title was recovered from the conference Indico.
 - [ ] **One title to confirm**: M. Hippert's Initial Stages 2019 flash talk shows the title of his slides (*Understanding p<sub>T</sub>-dependent flow fluctuations from initial geometry*); the conference programme lists it as *Linear and non-linear response of two-particle correlations to initial-geometry fluctuations*.
-- [ ] **Slides hosted on the legacy server.** Eight presentation links point to PDFs on `sites.ifi.unicamp.br` (all reachable in November 2026; 87 MB in total, of which 50 MB is a single file). If that server goes away they break. Options, with the authors' permission: attach them to a GitHub release of this repository (keeps the repository small), or deposit them on Zenodo (permanent DOI); or accept the risk.
-- [ ] **Wiki** (`/wiki/`, not linked from the menu): develop, or remove.
-- [ ] Ideas from the original plan, not started: current projects / working groups page; software and data resources page; official mailing list; governance and code of conduct; data and software citation policy; media kit (logo, canonical name, citation text).
+- [ ] **Publication categories.** The publications list came from the HADREX publications page, which the legacy ExTrEMe site linked as its own. Confirm that the categories *Pythia and Angantyr Studies*, *3C Collaboration and Vorticity*, *Selected Related Theory Papers* and *NeXSPheRIO Legacy Papers* belong on the ExTrEMe site.
+- [ ] **Wiki** (`/wiki/`, not linked from the menu): kept for now; develop or remove later.
 
-## Open — maintenance
+## Next steps (later)
 
-- [ ] Protect `main` in the collaboration repository: require pull requests and the *Site Checks* status before merging (GitHub Pages publishes `main` regardless of the checks).
-- [ ] Decide who reviews contributions, and refresh publications periodically (`scripts/update_publications_from_inspirehep.py --sync-all`, e.g. every few months).
+Current projects / working groups page; official mailing list; governance and code of conduct; data and software citation policy; media kit (logo, canonical name, citation text). The collaboration's code repositories are expected to stay private, so no public software page is planned.
 
 ## Rules of thumb for maintainers
 
 - **Who is a member.** The coordinator decides; when in doubt, ask. Useful evidence: the legacy ExTrEMe members page, kept current until about 2023 (people in the group at that time but not on that list were most likely not members), and authorship of papers signed by the ExTrEMe Collaboration. Being in the HADREX group does not by itself make someone a member, and neither does co-authoring a paper with the collaboration. People who leave move to *Alumni & Former Members*.
-- **What is published.** Only theses by ExTrEMe members appear on the Publications page; other HADREX material belongs on the HADREX site.
+- **What is published.** Only theses by ExTrEMe members appear on the Publications page; other HADREX material belongs on the HADREX site. Everything that was on `sites.ifi.unicamp.br/extreme/` itself is considered correct.
+- **Identifiers.** Match INSPIRE profiles by ORCID, never by name alone: several members have namesakes in physics (e.g. another Jun Takahashi on INSPIRE).
 
 ## Deliberately not migrated
 
 - HADREX-only material from `sites.ifi.unicamp.br/hadrex/` (group roster, medical-physics papers, ALICE and other theses outside the ExTrEMe scope).
 - Internal links from the legacy home page (analysis logbook folder, analysis code repository).
-- FAPESP grant **2017/04616-7** (decided November 2026: left out). The legacy home page named it as the thematic grant, but it appears in no paper indexed by INSPIRE-HEP, whereas the thematic projects 2017/05685-2 and 2023/13749-1 are acknowledged in 111 and 43 papers; it is most likely a typo. A maintainer comment next to the grant numbers in `index.html` records this. Individual grants named on the legacy page (2018/01245-0, 2018/07833-1, 2016/24029-6, CNPq 306397/2016) are not listed on the site either.
+- Individual grants named on the legacy home page (2018/01245-0, 2018/07833-1, 2016/24029-6, CNPq 306397/2016); the home page lists the thematic projects and "subsequent research grants".
 
 ## Legacy pages (for reference)
 

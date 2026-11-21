@@ -29,7 +29,9 @@ python3 scripts/update_publications_from_inspirehep.py --update-missing-dois
 python3 scripts/update_publications_from_inspirehep.py --sync-all --dry-run                      # preview only
 ```
 
-Keeps `_data/publications.yml` in sync with INSPIRE-HEP and writes new entries in the site's format (venue `Journal Vol, Page (Year)`, author initials). It only fills in missing information and replaces `Preprint`/`Under review` venues; existing fields are never removed. It rewrites the whole file, so keep comments out of `publications.yml`, and review the diff before committing.
+Keeps `_data/publications.yml` in sync with INSPIRE-HEP and writes new entries in the site's format (venue `Journal Vol, Page (Year)`, author initials). It only fills in missing information and replaces `Preprint`/`Under review` venues; existing fields are never removed. It rewrites the whole file, so keep comments out of `publications.yml`, and review the diff before committing. New papers without a journal reference get the venue `Preprint`.
+
+The workflow `.github/workflows/inspire-sync.yml` runs `--sync-all` and the default mode (new papers tagged with the ExTrEMe collaboration on INSPIRE) every month and proposes the result as a pull request; see the root `README.md`.
 
 ## `make_og_image.js`
 

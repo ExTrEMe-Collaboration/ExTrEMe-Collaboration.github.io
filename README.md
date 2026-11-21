@@ -59,7 +59,7 @@ The site is plain [Jekyll](https://jekyllrb.com/) built by GitHub Pages: content
 | [`_includes/`](_includes/README.md) | Reusable pieces (header, footer, one talk, one paper, …) |
 | [`assets/`](assets/README.md) | CSS, JavaScript, images |
 | [`scripts/`](scripts/README.md) | Data checks, link checker, INSPIRE-HEP sync |
-| `.github/workflows/` | CI (`site-checks.yml`) and the optional fork preview (`fork-preview.yml`) |
+| `.github/workflows/` | CI (`site-checks.yml`), the monthly INSPIRE-HEP sync (`inspire-sync.yml`) and the optional fork preview (`fork-preview.yml`) |
 | `MIGRATION_PLAN.md` | What is done and what is still open |
 
 Each folder's README explains its contents; none of them is published on the website.
@@ -71,6 +71,17 @@ Every pull request (and every push to `main`) runs `site-checks.yml`:
 1. `scripts/check_data.py` — validates `_data/` and annotates the offending lines in the pull request;
 2. a Jekyll build with the same builder as GitHub Pages;
 3. `scripts/check_links.py` — every internal link and `#anchor` in the built site must resolve.
+
+### Automatic publication updates
+
+On the 2nd of every month, `inspire-sync.yml` runs the INSPIRE-HEP sync script: it fills in journal references, DOIs and years (e.g. for papers still marked `Preprint`) and adds new papers that INSPIRE tags with the ExTrEMe collaboration. If anything changed, it opens a pull request (or updates the one already open) for a maintainer to review; nothing is merged automatically. It can also be started by hand from the *Actions* tab.
+
+- One-time setting in the repository: *Settings → Actions → General → Workflow permissions → Allow GitHub Actions to create and approve pull requests*.
+- Cost: GitHub Actions is free for public repositories; a run takes about a minute.
+- GitHub pauses scheduled workflows in repositories with no activity for 60 days; re-enable it from the *Actions* tab if that happens.
+- Pull requests opened by the workflow do not start *Site Checks* by themselves; close and reopen the pull request to run them.
+
+### Publishing
 
 The site itself is deployed by GitHub Pages from `main`, independently of these checks. To make sure nothing broken is published, protect `main` (*Settings → Branches*): require pull requests and the *Site Checks* status.
 

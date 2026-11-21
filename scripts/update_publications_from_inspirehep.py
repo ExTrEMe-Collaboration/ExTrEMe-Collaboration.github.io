@@ -238,6 +238,13 @@ def update_publications(hits, dry_run=False, category_name="ExTrEMe Collaboratio
             if "ExTrEMe" in category_name and "(The ExTrEMe Collaboration)" not in entry.get("authors", ""):
                 entry["authors"] = entry.get("authors", "") + " (The ExTrEMe Collaboration)"
 
+            # Not published yet: use the site's "Preprint" venue (replaced by
+            # --sync-all once INSPIRE has the journal reference), in site key order.
+            if not entry.get("venue"):
+                entry["venue"] = "Preprint"
+            order = ["year", "title", "authors", "venue", "doi", "arxiv"]
+            entry = {k: entry[k] for k in order if k in entry}
+
             target_cat = None
             for cat in yaml_data:
                 if cat.get("category") == category_name:
