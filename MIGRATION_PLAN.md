@@ -6,7 +6,7 @@ Last reviewed: November 2026.
 ## Done
 
 - [x] Site skeleton, routing and custom domain (`www.extreme-collaboration.science`).
-- [x] Content migrated from the legacy WordPress site (`sites.ifi.unicamp.br/extreme`): members, simulation chain, the full list of presentations (72), publications and theses (49).
+- [x] Content migrated from the legacy WordPress site (`sites.ifi.unicamp.br/extreme`): members, simulation chain, the full list of presentations (72), publications and theses (44 after the membership audit below).
 - [x] Structured data in `_data/` with documented conventions (`_data/README.md`) and automatic validation (`scripts/check_data.py`).
 - [x] Presentations and publications pages with search and filters (type, speaker, category).
 - [x] ORCID iDs and Lattes CVs on the Members page (verified against INSPIRE-HEP, the ORCID registry, the HADREX member list and the members themselves). R. Krupczak's INSPIRE link pointed to another person's profile and was corrected.
@@ -14,15 +14,12 @@ Last reviewed: November 2026.
 - [x] Social-preview metadata, image alt texts, colour contrast checked against WCAG AA, dark mode.
 - [x] Contribution guide for non-specialists (top of `README.md`) and maintainer notes in each folder.
 - [x] Fork preview workflow for testing changes on GitHub Pages.
+- [x] **Membership audit** (November 2026): every person on the Members page was checked against the author lists of every paper on the site and against the legacy ExTrEMe members page. Six people listed as alumni, and their theses, were removed: they were never ExTrEMe members. They had been added because, when the legacy site was scraped, the ExTrEMe pages and the pages of the HADREX group (same server, overlapping people) were read together and their member and thesis lists merged by mistake. Co-authors of collaboration papers who were never members are not listed either. The collaboration paper arXiv:2611.18290 was added.
 
 ## Open — content (needs a decision or information from members)
 
-- [ ] **Missing identifiers.** Lattes and ORCID for Eduardo Oliveira Pinho. ORCID for João Paulo Picchetti: the registry has a record under that name (0000-0003-3273-9726) with no other information, to be confirmed by him. André Vieira da Silva has no ORCID.
-- [ ] **Membership audit** (author lists of every paper on the site, November 2026). To decide:
-  - Alumni who co-authored no ExTrEMe paper: G. Reis Garcia and D. Silva de Albuquerque (ALICE theses, HADREX only), A. Vieira da Silva (PYTHIA/Angantyr line), G. Rabelo Soares, J. P. Picchetti, V. H. Ribeiro (3C line). Keep, or move off the ExTrEMe page?
-  - Their theses on the Publications page, for the same reason.
-  - Co-authors of ExTrEMe papers not on the Members page: R. Derradi de Souza (2019 PCA paper; HADREX alumnus) and J.-F. Paquet (2024 Bayesian paper; external).
-  - Collaboration paper missing from the site: arXiv:2611.18290, *Are hybrid hydrodynamic models missing soft-pion physics?* (13 current members).
+- [ ] **Missing identifiers.** Lattes and ORCID for Eduardo Oliveira Pinho.
+- [ ] **Presentations by non-members.** Three presentations from the legacy ExTrEMe list were given by people who are not members (marked `external: true` in `_data/talks.yml`): C. Bierlich (SQM 2019), L. Lober (Initial Stages 2021 poster) and an ENFPC 2022 talk by a former HADREX student. Keep them, or list only presentations by members?
 - [ ] **Two presentations without title**: J. Noronha at Initial Stages 2019 and at WWND 2019 (the legacy slide link for the latter is dead).
 - [ ] **Slides hosted on the legacy server.** Eight presentation links point to PDFs on `sites.ifi.unicamp.br`. If that server goes away they break: decide whether to copy them into this repository (with the authors' permission) or accept the risk.
 - [ ] **Wiki** (`/wiki/`, not linked from the menu): develop, or remove.
@@ -32,6 +29,11 @@ Last reviewed: November 2026.
 
 - [ ] Protect `main` in the collaboration repository: require pull requests and the *Site Checks* status before merging (GitHub Pages publishes `main` regardless of the checks).
 - [ ] Decide who reviews contributions, and refresh publications periodically (`scripts/update_publications_from_inspirehep.py --sync-all`, e.g. every few months).
+
+## Rules of thumb for maintainers
+
+- **Who is a member.** The coordinator decides; when in doubt, ask. Useful evidence: the legacy ExTrEMe members page, kept current until about 2023 (people in the group at that time but not on that list were most likely not members), and authorship of papers signed by the ExTrEMe Collaboration. Being in the HADREX group does not by itself make someone a member, and neither does co-authoring a paper with the collaboration. People who leave move to *Alumni & Former Members*.
+- **What is published.** Only theses by ExTrEMe members appear on the Publications page; other HADREX material belongs on the HADREX site.
 
 ## Deliberately not migrated
 

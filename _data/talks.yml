@@ -144,6 +144,7 @@
 
 - date: "2022-09"
   speaker: Vitor Hugo Ribeiro
+  external: true
   type: Talk
   title: "Jet thermalization through vortex formation in the quark-gluon plasma"
   event: XLII Encontro Nacional de Física de Partículas e Campos (ENFPC)

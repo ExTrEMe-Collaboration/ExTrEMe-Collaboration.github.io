@@ -89,6 +89,11 @@
     venue: Phys. Rev. C 110, 064904 (2024)
     doi: 10.1103/PhysRevC.110.064904
     arxiv: '2409.17127'
+  - year: 2026
+    title: Are hybrid hydrodynamic models missing soft-pion physics?
+    authors: O. Ferreira et al. (The ExTrEMe Collaboration)
+    venue: Preprint
+    arxiv: '2611.18290'
 - category: Pythia and Angantyr Studies
   description: Heavy-ion phenomenology with PYTHIA and PYTHIA/Angantyr coupled to
     hadronic rescattering.
@@ -302,43 +307,6 @@
     venue: MSc thesis, Universidade de São Paulo (USP)
     doi: 10.11606/D.43.2024.tde-30092024-091952
     url: https://www.teses.usp.br/teses/disponiveis/43/43134/tde-30092024-091952/
-  - year: 2024
-    title: Initial conditions in relativistic heavy ion collisions and the 3D structure
-      of the proton
-    authors: Gabriel Rabelo Soares
-    venue: MSc thesis, Universidade Estadual de Campinas (Unicamp)
-    advisor: J. Takahashi and G. Torrieri
-    url: https://repositorio.unicamp.br/Acervo/Detalhe/1501398
-  - year: 2023
-    title: Machine Learning Methods for Strangeness reconstruction in ALICE
-    authors: Gabriel Reis Garcia
-    venue: PhD thesis, Universidade Estadual de Campinas (Unicamp)
-    advisor: J. Takahashi
-    url: http://repositorio.unicamp.br/jspui/handle/REPOSIP/276924
-  - year: 2020
-    title: Simulating heavy-ion collisions using a hybrid model based on QCD and hadronic
-      rescattering
-    authors: André Vieira da Silva
-    venue: PhD thesis, Universidade Estadual de Campinas (Unicamp)
-    advisor: D. D. Chinellato
-  - year: 2019
-    title: Multi-strange hadrons in Pb–Pb collisions at the LHC with ALICE
-    authors: Danilo Silva de Albuquerque
-    venue: PhD thesis, Universidade Estadual de Campinas (Unicamp)
-    advisor: J. Takahashi
-    url: https://www.repositorio.unicamp.br/acervo/detalhe/1375952
-  - year: 2023
-    title: Vorticity rings in relativistic heavy ion collisions
-    authors: Vitor Hugo Ribeiro
-    venue: MSc thesis, Universidade Estadual de Campinas (Unicamp)
-    advisor: J. Takahashi
-    url: https://repositorio.unicamp.br/acervo/detalhe/1362898
-  - year: 2022
-    title: Studying the impact of the nucleon size in relativistic heavy-ion collisions
-    authors: João Paulo Picchetti
-    venue: MSc thesis, Universidade Estadual de Campinas (Unicamp)
-    advisor: J. Takahashi
-    url: https://repositorio.unicamp.br/acervo/detalhe/1254908
   - year: 2021
     title: Jets, vortices and lambda polarization in the quark-gluon plasma
     authors: João Guilherme Prado Barbon
