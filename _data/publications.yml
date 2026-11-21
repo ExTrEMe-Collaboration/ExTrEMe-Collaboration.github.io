@@ -94,53 +94,6 @@
     authors: O. Ferreira et al. (The ExTrEMe Collaboration)
     venue: Preprint
     arxiv: '2611.18290'
-- category: Pythia and Angantyr Studies
-  description: Heavy-ion phenomenology with PYTHIA and PYTHIA/Angantyr coupled to
-    hadronic rescattering.
-  items:
-  - year: 2018
-    title: Resonance suppression from color reconnection
-    authors: R. Acconcia et al.
-    venue: Phys. Rev. D 97, 036010 (2018)
-    doi: 10.1103/PhysRevD.97.036010
-    arxiv: '1707.02075'
-  - year: 2020
-    title: Studying the effect of the hadronic phase in nuclear collisions with PYTHIA
-      and UrQMD
-    authors: A. V. da Silva et al.
-    venue: Springer Proc. Phys. 250, 319 (2020)
-    note: SQM 2019 proceedings
-    doi: 10.1007/978-3-030-53448-6_50
-    arxiv: '1911.12824'
-  - year: 2020
-    title: Studies of heavy-ion collisions using PYTHIA Angantyr and UrQMD
-    authors: A. V. da Silva et al.
-    venue: Preprint
-    note: Earlier version titled “Suppression of the nuclear modification factor with
-      a hybrid model based on perturbative QCD and hadronic rescattering”
-    arxiv: '2002.10236'
-- category: 3C Collaboration and Vorticity
-  description: Vorticity, vortex rings and hyperon polarization in the quark-gluon
-    plasma, in collaboration with the 3C group.
-  items:
-  - year: 2021
-    title: Lambda polarizations from thermalized jet energy
-    authors: W. M. Serenone et al.
-    venue: Phys. Lett. B 820, 136500 (2021)
-    doi: 10.1016/j.physletb.2021.136500
-    arxiv: '2102.11919'
-  - year: 2021
-    title: Vortex rings from high energy central p+A collisions
-    authors: M. A. Lisa et al.
-    venue: Phys. Rev. C 104, L011901 (2021)
-    doi: 10.1103/PhysRevC.104.L011901
-    arxiv: '2101.10872'
-  - year: 2024
-    title: Lambda polarization from vortex rings as the medium response for jet thermalization
-    authors: V. H. Ribeiro et al.
-    venue: Phys. Rev. C 109, 014905 (2024)
-    doi: 10.1103/PhysRevC.109.014905
-    arxiv: '2305.02428'
 - category: Selected Related Theory Papers
   description: Papers by collaboration members supported by the FAPESP thematic project
     2017/05685-2.
@@ -264,40 +217,6 @@
     note: Quark Matter 2019 proceedings
     doi: 10.1016/j.nuclphysa.2020.121748
     arxiv: '2003.00181'
-- category: NeXSPheRIO Legacy Papers
-  description: Earlier event-by-event hydrodynamic studies with the NeXSPheRIO model.
-  items:
-  - year: 2012
-    title: Effects of initial state fluctuations in the final state elliptic flow
-      measurements using the NeXSPheRIO model
-    authors: R. D. de Souza et al.
-    venue: Phys. Rev. C 85, 054909 (2012)
-    doi: 10.1103/PhysRevC.85.054909
-    arxiv: '1110.5698'
-  - year: 2012
-    title: Coarse graining scale and effectiveness of hydrodynamic modeling
-    authors: Ph. Mota et al.
-    venue: Eur. Phys. J. A 48, 165 (2012)
-    doi: 10.1140/epja/i2012-12165-7
-    arxiv: '1210.3129'
-  - year: 2011
-    title: Longitudinal dependence of two-particle momentum correlations from NEXSPHERIO
-      model
-    authors: M. Sharma et al.
-    venue: Phys. Rev. C 84, 054915 (2011)
-    doi: 10.1103/PhysRevC.84.054915
-    arxiv: '1107.3587'
-  - year: 2009
-    title: Topology studies of hydrodynamics using two-particle correlation analysis
-    authors: J. Takahashi et al.
-    venue: Phys. Rev. Lett. 103, 242301 (2009)
-    doi: 10.1103/PhysRevLett.103.242301
-    arxiv: '0902.4870'
-  - year: 2011
-    title: Multi-flux tube initial condition and event-by-event hydrodynamics
-    authors: Ph. Mota, T. Kodama, T. Koide, and J. Takahashi
-    venue: Nucl. Phys. A 862-863, 188 (2011)
-    doi: 10.1016/j.nuclphysa.2011.05.039
 - category: Theses
   description: PhD and MSc theses by students of the collaboration.
   items:
