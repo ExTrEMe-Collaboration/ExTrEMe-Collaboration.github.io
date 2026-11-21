@@ -1,5 +1,6 @@
 /*
- * Hero animation: a stylized heavy-ion collision seen in the reaction plane.
+ * Hero animation (the "hero" is the large banner at the top of the home page):
+ * a stylized heavy-ion collision seen in the reaction plane.
  * Two Lorentz-contracted nuclei collide at a random impact parameter; the
  * participant nucleons form a hot fireball that expands (mostly along the
  * beam) and freezes out into hadrons, while spectators fly on.
@@ -106,7 +107,7 @@
           // Gaussian "rapidity": how far this participant's glow spreads along
           // the beam, and the longitudinal kick given to its hadrons.
           rapidity: gauss(),
-          // Current fireball position of a participant; written by draw().
+          // Current fireball position of a participant; set by placeParticipants().
           px: 0, py: 0
         });
       }
@@ -136,12 +137,29 @@
     }
   }
 
-  // Advance the clock by dt seconds: trigger freeze-out once, move hadrons,
-  // and start a new event after T_END.
+  // Fireball expansion after impact: 0 at tau = 0, approaching 1.
+  function fireballGrowth(tau) { return 1 - Math.exp(-tau / 0.55); }
+
+  // Move the participants with the expanding fireball: strong spread along the
+  // beam (rapidity), milder transverse growth. Done in update() rather than in
+  // draw(), so that freeze-out always starts from the current fireball, also
+  // when no frame is drawn in between (the reduced-motion still frame).
+  function placeParticipants(ev, growth) {
+    for (var i = 0; i < ev.nucleons.length; i++) {
+      var n = ev.nucleons[i];
+      if (!n.participant) continue;
+      n.px = cx + n.ux * 0.4 + n.rapidity * R * 1.1 * growth;
+      n.py = cy + (n.y - cy) * (1 + 0.45 * growth);
+    }
+  }
+
+  // Advance the clock by dt seconds: move the fireball, trigger freeze-out
+  // once, move hadrons, and start a new event after T_END.
   function update(dt) {
     var ev = event;
     ev.t += dt;
     var tau = ev.t - T_HIT;
+    if (tau > 0) placeParticipants(ev, fireballGrowth(tau));
     if (tau > T_FREEZE && !ev.frozen) {
       ev.frozen = true;
       spawnHadrons(ev);
@@ -201,7 +219,7 @@
 
     // Fireball from participants: one radial gradient per participant.
     if (tau > 0) {
-      var growth = 1 - Math.exp(-tau / 0.55);   // 0 → 1, expansion
+      var growth = fireballGrowth(tau);         // 0 → 1, expansion
       var heat = Math.exp(-tau / 0.9);          // 1 → 0, cooling
       var fade = tau < T_FREEZE ? 1 : clamp01(1 - (tau - T_FREEZE) / 0.7);
       var blob = R * (0.2 + 0.3 * growth);      // glow radius
@@ -211,9 +229,7 @@
         for (var i = 0; i < ev.nucleons.length; i++) {
           var n = ev.nucleons[i];
           if (!n.participant) continue;
-          // Strong spread along the beam (rapidity), milder transverse growth.
-          n.px = cx + n.ux * 0.4 + n.rapidity * R * 1.1 * growth;
-          n.py = cy + (n.y - cy) * (1 + 0.45 * growth);
+          // n.px, n.py were set for this time step by placeParticipants().
           var g = ctx.createRadialGradient(n.px, n.py, 0, n.px, n.py, blob);
           g.addColorStop(0, "rgba(" + rgbCore + ", " + 0.22 * fade + ")");
           g.addColorStop(0.5, "rgba(249, 115, 22, " + 0.1 * fade + ")");
@@ -282,9 +298,6 @@
   }
 
   // prefers-reduced-motion: no animation, a single still frame instead.
-  // Known issue: participants' fireball positions (px, py) are only computed
-  // in draw(), which this loop does not call, so the hadrons of the still frame
-  // start from the canvas corner (0, 0). See assets/README.md.
   function renderStill() {
     // Advance a fresh event to just after hadronization and draw one frame.
     event = newEvent();

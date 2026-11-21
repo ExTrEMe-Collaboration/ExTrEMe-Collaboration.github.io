@@ -39,4 +39,4 @@ node scripts/make_og_image.js                              # writes assets/image
 node scripts/make_og_image.js http://127.0.0.1:4000/ /tmp/preview.jpg   # custom URL / output
 ```
 
-Regenerates the 1200×630 preview image used when the site is shared, by capturing the home-page hero at the fireball moment: fixed viewport, seeded `Math.random` (the same collision every run), a wait of about 1.75 s after load, saved as JPEG. Needs Playwright with Chromium (`npm install playwright && npx playwright install chromium`). Look at the result before committing it; to try a different collision, change `SEED` at the top of the script.
+Regenerates the 1200×630 preview image used when the site is shared, by capturing the home-page hero (the large banner at the top of the home page) at the fireball moment: fixed viewport, seeded `Math.random` (the same collision every run), a wait of about 1.75 s after load, saved as JPEG. Needs Playwright with Chromium (`npm install playwright && npx playwright install chromium`). Look at the result before committing it; to try a different collision, change `SEED` at the top of the script.

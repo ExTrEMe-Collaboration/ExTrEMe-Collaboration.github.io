@@ -5,7 +5,7 @@
 
 /* ---------- Tokens ---------- */
 :root {
-  /* night: header, hero, footer */
+  /* night: header, hero (the large banner at the top of the home page), footer */
   --night: #0a0d16;
   --night-2: #111727;
   --night-3: #1a2236;

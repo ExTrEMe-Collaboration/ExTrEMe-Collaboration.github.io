@@ -2,7 +2,8 @@
 /*
  * Regenerate assets/images/og-image.jpg: the 1200×630 preview image shown when
  * a page of the site is shared (Slack, e-mail, social media). It is a capture
- * of the home-page hero, taken while the collision fireball glows.
+ * of the home-page hero (the large banner at the top of the home page), taken
+ * while the collision fireball glows.
  *
  * Usage, with the site served locally (e.g. `bundle exec jekyll serve`):
  *
