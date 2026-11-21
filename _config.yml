@@ -30,6 +30,10 @@ defaults:
 # Keep repository-only files out of the published site.
 exclude:
   - README.md
+  - _data/README.md
+  - _includes/README.md
+  - _layouts/README.md
+  - assets/README.md
   - MIGRATION_PLAN.md
   - Gemfile
   - Gemfile.lock
