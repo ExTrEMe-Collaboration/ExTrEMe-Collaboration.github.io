@@ -1,5 +1,5 @@
 ---
-title: Talks & Presentations
+title: Presentations
 permalink: /presentations/
 eyebrow: Dissemination
 lead: Invited talks, conference presentations, seminars and posters given by members of the ExTrEMe Collaboration.
@@ -12,18 +12,29 @@ lead: Invited talks, conference presentations, seminars and posters given by mem
 <div class="toolbar" data-filter="talks">
   <label class="search">
     {% include icon.html name="search" %}
-    <span class="sr-only">Search talks</span>
+    <span class="sr-only">Search presentations</span>
     <input type="search" placeholder="Search titles, events, places…" autocomplete="off" data-filter-search>
   </label>
-  <label class="select">
-    <span>Speaker</span>
-    <select data-filter-select="speaker">
-      <option value="">Everyone</option>
+
+  <div class="menu" data-filter-menu="speaker">
+    <span class="menu-label" id="speaker-label">Speaker</span>
+    <button type="button" class="menu-button" id="speaker-button" aria-haspopup="listbox" aria-expanded="false"
+            aria-controls="speaker-list" aria-labelledby="speaker-label speaker-button" data-menu-button>
+      <span data-menu-value>Everyone</span>{% include icon.html name="chevron" %}
+    </button>
+    <ul class="menu-list" id="speaker-list" role="listbox" tabindex="-1" aria-labelledby="speaker-label" data-menu-list hidden>
+      <li class="menu-option" role="option" id="speaker-opt-0" data-value="" aria-selected="true">
+        {%- include icon.html name="check" %}<span>Everyone</span><span class="count">{{ talks.size }}</span>
+      </li>
       {%- for s in speakers %}
-      <option>{{ s }}</option>
+      {%- assign n = talks | where: "speaker", s | size %}
+      <li class="menu-option" role="option" id="speaker-opt-{{ forloop.index }}" data-value="{{ s }}" aria-selected="false">
+        {%- include icon.html name="check" %}<span>{{ s }}</span><span class="count">{{ n }}</span>
+      </li>
       {%- endfor %}
-    </select>
-  </label>
+    </ul>
+  </div>
+
   <div class="chips" role="group" aria-label="Filter by type">
     <button type="button" class="chip" aria-pressed="true" data-filter-chip="">All <span class="count">{{ talks.size }}</span></button>
     {%- for ty in types %}
@@ -48,6 +59,6 @@ lead: Invited talks, conference presentations, seminars and posters given by mem
   </section>
   {%- endfor %}
 </div>
-<p class="empty-state" data-filter-empty hidden>No talks match these filters.</p>
+<p class="empty-state" data-filter-empty hidden>No presentations match these filters.</p>
 
-<p class="page-note">Missing a talk? Add it to <code>_data/talks.yml</code> in the <a href="https://github.com/{{ site.site_repository }}" target="_blank" rel="noopener">website repository</a> or <a href="{{ '/contact/' | relative_url }}">let us know</a>.</p>
+<p class="page-note">Missing a presentation? Add it to <code>_data/talks.yml</code> in the <a href="https://github.com/{{ site.site_repository }}" target="_blank" rel="noopener">website repository</a> or <a href="{{ '/contact/' | relative_url }}">let us know</a>.</p>

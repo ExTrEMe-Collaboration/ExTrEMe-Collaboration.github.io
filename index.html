@@ -36,7 +36,7 @@ scripts:
       <div><dt>Researchers</dt><dd>{{ member_count }}</dd></div>
       <div><dt>Institutions</dt><dd>{{ site.data.institutions.size }}<small> in {{ countries.size }} countries</small></dd></div>
       <div><dt>Papers</dt><dd>{{ paper_count }}</dd></div>
-      <div><dt>Talks</dt><dd>{{ site.data.talks.size }}</dd></div>
+      <div><dt>Presentations</dt><dd>{{ site.data.talks.size }}</dd></div>
     </dl>
   </div>
 </section>
@@ -107,7 +107,7 @@ scripts:
     <div class="latest-col">
       <header class="section-head section-head-sm">
         <p class="eyebrow">On the road</p>
-        <h2>Recent talks</h2>
+        <h2>Recent presentations</h2>
       </header>
       {%- assign recent_talks = site.data.talks | sort: "date" | reverse -%}
       <ol class="talk-list talk-list-compact">
@@ -115,7 +115,7 @@ scripts:
         {% include talk.html talk=t show_year=true %}
         {%- endfor %}
       </ol>
-      <a class="link-arrow" href="{{ '/presentations/' | relative_url }}">All talks {% include icon.html name="arrow" %}</a>
+      <a class="link-arrow" href="{{ '/presentations/' | relative_url }}">All presentations {% include icon.html name="arrow" %}</a>
     </div>
   </div>
 </section>

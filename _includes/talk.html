@@ -37,8 +37,13 @@
       {%- if t.coauthors %}<span class="talk-coauthors">with {{ t.coauthors | join: ", " }}</span>{% endif %}
     </p>
     <p class="talk-event">
-      {%- if t.event_url -%}<a href="{{ t.event_url }}" target="_blank" rel="noopener">{{ t.event }}</a>{%- else -%}<span>{{ t.event }}</span>{%- endif -%}
-      {%- if t.location %}<span class="talk-location">{% include icon.html name="pin" %}{{ t.location }}</span>{% endif -%}
+      <span class="talk-event-name">{% if t.event_url %}<a href="{{ t.event_url }}" target="_blank" rel="noopener">{{ t.event }}</a>{% else %}{{ t.event }}{% endif %}</span>
+      {%- if t.location -%}
+        {%- comment -%} keep the pin icon on the same line as the first word {%- endcomment -%}
+        {%- assign loc = t.location | split: " " -%}
+        {%- assign loc_rest = loc | slice: 1, loc.size | join: " " -%}
+        <span class="talk-location"><span class="nowrap">{% include icon.html name="pin" %}{{ loc.first }}</span>{% if loc_rest != "" %} {{ loc_rest }}{% endif %}</span>
+      {%- endif -%}
       {%- if t.video %}<a class="talk-video" href="{{ t.video }}" target="_blank" rel="noopener">{% include icon.html name="play" %}Recording</a>{% endif -%}
     </p>
   </div>

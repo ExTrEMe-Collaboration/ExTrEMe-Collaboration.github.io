@@ -641,10 +641,10 @@ main:focus { outline: none; }
   color: var(--muted);
 }
 .talk-event { margin: 0; font-size: 0.93rem; color: var(--muted); line-height: 1.55; }
-.talk-event > * + *::before {
-  content: "·";
-  display: inline-block;
-  margin: 0 0.5em;
+/* separator travels with the item before it, so a line break never starts with "·" */
+.talk-event > :not(:last-child)::after {
+  content: "\00a0\00b7\200b"; /* no-break space, middle dot, then a break opportunity */
+  margin-right: 0.45em;
   color: var(--line-strong);
 }
 .talk-speaker { font-weight: 600; color: var(--ink); text-decoration: none; }
@@ -704,7 +704,7 @@ a.talk-speaker:hover { color: var(--accent); text-decoration: underline; }
 .no-js .toolbar { display: none; }
 .toolbar .chips,
 .toolbar .filter-status { grid-column: 1 / -1; }
-.toolbar:not(:has(.select)) .search { grid-column: 1 / -1; }
+.toolbar:not(:has(.menu)) .search { grid-column: 1 / -1; }
 
 .search {
   display: flex;
@@ -729,23 +729,76 @@ a.talk-speaker:hover { color: var(--accent); text-decoration: underline; }
   padding: 0.65rem 0;
 }
 
-.select {
+/* Dropdown menu (custom listbox, see site.js) */
+.menu {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9rem;
   color: var(--muted);
 }
-.select select {
+.menu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-width: 12.5rem;
+  max-width: 16rem;
   font: inherit;
   font-size: 0.95rem;
   color: var(--ink);
   background: var(--bg);
   border: 1px solid var(--line-strong);
   border-radius: 999px;
-  padding: 0.55rem 0.9rem;
-  max-width: 15rem;
+  padding: 0.55rem 0.8rem 0.55rem 1rem;
+  cursor: pointer;
+  text-align: left;
 }
+.menu-button > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.menu-button:hover { border-color: var(--ink); }
+.menu-button[aria-expanded="true"] { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.menu-button[aria-expanded="true"] .icon-chevron { transform: rotate(180deg); }
+.menu-button .icon-chevron { color: var(--faint); transition: transform 0.15s ease; }
+.menu.has-value .menu-button { border-color: var(--ink); font-weight: 500; }
+
+.menu-list {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 30;
+  width: max-content;
+  min-width: 100%;
+  max-width: min(22rem, calc(100vw - 2 * var(--gutter)));
+  max-height: 20rem;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  outline: none;
+}
+.menu-option {
+  display: grid;
+  grid-template-columns: 1.1rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.6rem;
+  border-radius: 9px;
+  font-size: 0.93rem;
+  color: var(--ink);
+  cursor: pointer;
+  user-select: none;
+}
+.menu-option .icon-check { visibility: hidden; color: var(--accent); }
+.menu-option[aria-selected="true"] { font-weight: 600; }
+.menu-option[aria-selected="true"] .icon-check { visibility: visible; }
+.menu-option.is-active { background: var(--surface-2); }
+.menu-list:focus-visible .menu-option.is-active { outline: 2px solid var(--focus); outline-offset: -2px; }
+.menu-option .count { font-family: var(--font-mono); font-size: 0.75rem; color: var(--faint); }
 
 .chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
 .chip {
@@ -780,8 +833,9 @@ a.talk-speaker:hover { color: var(--accent); text-decoration: underline; }
 
 @media (max-width: 640px) {
   .toolbar { grid-template-columns: 1fr; }
-  .select { justify-content: space-between; }
-  .select select { flex: 1; max-width: none; }
+  .menu { justify-content: space-between; }
+  .menu-button { flex: 1; max-width: none; }
+  .menu-list { left: 0; right: 0; width: auto; max-width: none; }
 }
 
 /* ---------- Publications ---------- */
@@ -819,7 +873,7 @@ a.talk-speaker:hover { color: var(--accent); text-decoration: underline; }
 .pub-venue { margin: 0; font-size: 0.92rem; }
 .pub-journal { font-style: italic; color: var(--ink); }
 .pub-note { color: var(--faint); }
-.pub-venue > * + *::before { content: "·"; margin: 0 0.5em; color: var(--line-strong); font-style: normal; display: inline-block; }
+.pub-venue > :not(:last-child)::after { content: "\00a0\00b7\200b"; margin-right: 0.45em; color: var(--line-strong); font-style: normal; }
 .pub-ids { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.55rem 0 0; }
 
 .id-pill {
@@ -941,8 +995,10 @@ a.talk-speaker:hover { color: var(--accent); text-decoration: underline; }
   color: var(--faint);
 }
 .member-links { display: flex; flex-wrap: wrap; gap: 0.35rem 0.9rem; margin: 0.55rem 0 0; font-size: 0.88rem; }
-.member-links a { display: inline-flex; align-items: center; gap: 0.2rem; font-weight: 500; text-decoration: none; }
+.member-links a { display: inline-flex; align-items: center; gap: 0.3rem; font-weight: 500; text-decoration: none; }
 .member-links a:hover { text-decoration: underline; }
+.member-links .member-talks { color: var(--muted); }
+.member-links .member-talks:hover { color: var(--accent); }
 
 .role-badge {
   display: inline-block;
@@ -960,7 +1016,7 @@ a.talk-speaker:hover { color: var(--accent); text-decoration: underline; }
 .alumni-list { list-style: none; margin: 0; padding: 0; }
 .alumni-list li {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.8fr) minmax(0, 1.5fr) 5rem;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.6fr) minmax(0, 1.8fr) auto;
   gap: 1rem;
   align-items: baseline;
   padding: 0.75rem 0.5rem;
@@ -970,16 +1026,14 @@ a.talk-speaker:hover { color: var(--accent); text-decoration: underline; }
 .alumni-list li:first-child { border-top: 0; }
 .alumni-list li:target { background: var(--accent-soft); border-radius: 8px; }
 .alumni-name { font-weight: 600; }
-.alumni-name a { color: var(--ink); }
 .alumni-position { font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent); }
 .alumni-affiliation { color: var(--muted); }
-.alumni-talks { text-align: right; font-size: 0.88rem; }
-.alumni-talks a { text-decoration: none; font-weight: 500; }
+.alumni-list .member-links { margin: 0; justify-content: flex-end; }
 
 @media (max-width: 720px) {
   .alumni-list li { grid-template-columns: 1fr auto; gap: 0.1rem 1rem; }
   .alumni-affiliation { grid-column: 1 / -1; }
-  .alumni-talks { grid-column: 1 / -1; text-align: left; }
+  .alumni-list .member-links { grid-column: 1 / -1; justify-content: flex-start; margin-top: 0.25rem; }
 }
 
 .callout {
