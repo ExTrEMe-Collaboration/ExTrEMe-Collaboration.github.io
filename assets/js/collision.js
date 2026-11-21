@@ -24,6 +24,7 @@
  *   tau = T_FREEZE     freeze-out: hadron streaks are emitted
  *   tau T_FREEZE … +0.7  fireball fades; hadrons fly out for ~2.9 s
  *   tau 0 … 1.6        spectators keep flying and fade
+ *   t = T_HIT + 4.4 … T_END  calm pause of T_REST seconds: only the rings show
  *   t = T_END          a new event (new impact parameter, new nucleons) starts
  *
  * The page CSS (.hero-shade in assets/css/site.css) darkens the left side so
@@ -42,7 +43,8 @@
   var NUCLEONS = 60;        // per nucleus
   var T_HIT = 1.5;          // seconds until impact
   var T_FREEZE = 1.05;      // fireball lifetime before hadronization
-  var T_END = T_HIT + 4.4;  // end of one event
+  var T_REST = 10;          // calm pause between collisions
+  var T_END = T_HIT + 4.4 + T_REST;  // end of one event, pause included
   var CONTRACTION = 0.16;   // pancake thickness / radius
 
   // Canvas size, collision point (cx, cy), nuclear radius R and the speed of
