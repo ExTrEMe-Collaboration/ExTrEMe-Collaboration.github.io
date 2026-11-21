@@ -8,7 +8,10 @@
 #   position:    Short position label (e.g. "Professor", "PhD student", "PhD 2023").
 #   affiliation: Institution name, with acronym in parentheses.
 #   country:     Country of the affiliation.
-#   url:         (optional) Lattes CV, INSPIRE profile or personal page.
+#   lattes:      (optional) Lattes CV link, https://lattes.cnpq.br/<16 digits>
+#   orcid:       (optional) ORCID iD only, e.g. 0000-0002-4091-1779
+#   inspire:     (optional) INSPIRE-HEP author profile link
+#   url:         (optional) Personal or group web page
 #   role:        (optional) Collaboration role, highlighted on the card.
 
 - group: Faculty & Coordinators
@@ -18,58 +21,69 @@
       position: Professor
       affiliation: Stefan Meyer Institute for Subatomic Physics (ÖAW), Vienna
       country: Austria
-      url: https://lattes.cnpq.br/2080099102941335
+      lattes: https://lattes.cnpq.br/2080099102941335
+      orcid: 0000-0002-9982-9577
     - name: Gabriel S. Denicol
       position: Professor
       affiliation: Universidade Federal Fluminense (UFF)
       country: Brazil
-      url: https://lattes.cnpq.br/1823949676739992
+      lattes: https://lattes.cnpq.br/1823949676739992
+      orcid: 0000-0002-8395-9756
     - name: Fernando Gardim
       position: Professor
       affiliation: Universidade Federal de Alfenas (UNIFAL)
       country: Brazil
-      url: https://lattes.cnpq.br/2425549033248106
+      lattes: https://lattes.cnpq.br/2425549033248106
+      orcid: 0000-0002-4838-1469
     - name: Andre V. Giannini
       position: Professor
       affiliation: Universidade Federal da Grande Dourados (UFGD)
       country: Brazil
-      url: https://lattes.cnpq.br/2669085919057438
+      lattes: https://lattes.cnpq.br/2669085919057438
+      orcid: 0000-0003-0123-6472
     - name: Matthew Luzum
       position: Professor
       affiliation: Universidade de São Paulo (USP)
       country: Brazil
-      url: https://lattes.cnpq.br/3672547273353904
+      lattes: https://lattes.cnpq.br/3672547273353904
+      orcid: 0000-0002-0367-7055
       role: Collaboration Coordinator
     - name: Jorge Noronha
       position: Professor
       affiliation: University of Illinois Urbana-Champaign (UIUC)
       country: USA
-      url: https://lattes.cnpq.br/8775304977333608
+      lattes: https://lattes.cnpq.br/8775304977333608
+      orcid: 0000-0002-9817-0272
     - name: Tiago Nunes da Silva
       position: Professor
       affiliation: Universidade Federal de Santa Catarina (UFSC)
       country: Brazil
-      url: https://lattes.cnpq.br/6029696722164198
+      lattes: https://lattes.cnpq.br/6029696722164198
+      orcid: 0000-0001-8044-4055
     - name: Mauricio Hippert
       position: Professor
       affiliation: Universidade do Estado do Rio de Janeiro (UERJ)
       country: Brazil
-      url: https://lattes.cnpq.br/0055928814441454
+      lattes: https://lattes.cnpq.br/0055928814441454
+      orcid: 0000-0001-5802-3908
     - name: Gabriel S. Rocha
       position: Professor
       affiliation: Universidade Federal Fluminense (UFF)
       country: Brazil
-      url: https://lattes.cnpq.br/8012194884198562
+      lattes: https://lattes.cnpq.br/8012194884198562
+      orcid: 0000-0001-7190-8137
     - name: Jun Takahashi
       position: Professor
       affiliation: Universidade Estadual de Campinas (Unicamp)
       country: Brazil
-      url: https://lattes.cnpq.br/7057603141934226
+      lattes: https://lattes.cnpq.br/7057603141934226
+      orcid: 0000-0002-4091-1779
     - name: Giorgio Torrieri
       position: Professor
       affiliation: Universidade Estadual de Campinas (Unicamp)
       country: Brazil
-      url: https://lattes.cnpq.br/9839588082439361
+      lattes: https://lattes.cnpq.br/9839588082439361
+      orcid: 0000-0002-0611-766X
 
 - group: Postdoctoral Researchers
   id: postdocs
@@ -78,12 +92,14 @@
       position: Postdoc
       affiliation: Universidade de São Paulo (USP)
       country: Brazil
-      url: https://lattes.cnpq.br/6790966492250263
+      lattes: https://lattes.cnpq.br/6790966492250263
+      orcid: 0000-0002-6711-8308
     - name: Rajeev Singh
       position: Postdoc
       affiliation: Frankfurt Institute for Advanced Studies (FIAS)
       country: Germany
-      url: https://inspirehep.net/authors/1629845
+      inspire: https://inspirehep.net/authors/1629845
+      orcid: 0000-0001-5855-4039
 
 - group: Graduate Students
   id: students
@@ -96,12 +112,14 @@
       position: PhD student
       affiliation: Universidade de São Paulo (USP)
       country: Brazil
-      url: https://lattes.cnpq.br/4092459866318436
+      lattes: https://lattes.cnpq.br/4092459866318436
+      orcid: 0000-0001-6756-8600
     - name: Cicero D. Muncinelli
       position: PhD student
       affiliation: Universidade Estadual de Campinas (Unicamp)
       country: Brazil
-      url: https://lattes.cnpq.br/8192066238557675
+      lattes: https://lattes.cnpq.br/8192066238557675
+      orcid: 0000-0003-0076-3852
     - name: Eduardo Oliveira Pinho
       position: PhD student
       affiliation: Universidade Federal de Santa Catarina (UFSC)
@@ -110,7 +128,8 @@
       position: PhD student / Researcher
       affiliation: Universidade Federal de Santa Catarina (UFSC) / Bielefeld University
       country: Brazil / Germany
-      url: https://inspirehep.net/authors/1993437
+      inspire: https://inspirehep.net/authors/1993437
+      orcid: 0000-0002-8867-9702
 
 - group: Alumni & Former Members
   id: alumni
@@ -120,37 +139,51 @@
       position: Former postdoc
       affiliation: Universidade Estadual de Campinas (Unicamp)
       country: Brazil
-      url: https://lattes.cnpq.br/3286464028110773
+      lattes: https://lattes.cnpq.br/3286464028110773
+      orcid: 0000-0002-9873-9713
     - name: Antonio M. S. N. Ferreira
       position: Former postdoc
       affiliation: University of Valencia
       country: Spain
-      url: https://lattes.cnpq.br/3311487873554788
+      lattes: https://lattes.cnpq.br/3311487873554788
+      orcid: 0000-0003-2802-5296
     - name: Gabriel Reis Garcia
       position: PhD 2023
       affiliation: Universidade Estadual de Campinas (Unicamp)
       country: Brazil
+      lattes: https://lattes.cnpq.br/3174816999793596
+      orcid: 0000-0002-5298-2881
     - name: André Vieira da Silva
       position: PhD 2020
       affiliation: Universidade Estadual de Campinas (Unicamp)
       country: Brazil
+      lattes: https://lattes.cnpq.br/7580978088452236
     - name: Danilo Silva de Albuquerque
       position: PhD 2019
       affiliation: Universidade Estadual de Campinas (Unicamp)
       country: Brazil
+      lattes: https://lattes.cnpq.br/8737945913149930
+      orcid: 0000-0002-8840-5648
     - name: Gabriel Rabelo Soares
       position: MSc 2024
       affiliation: Universidade Estadual de Campinas (Unicamp)
       country: Brazil
+      lattes: https://lattes.cnpq.br/7433799701623306
+      orcid: 0000-0003-3843-4747
     - name: Vitor Hugo Ribeiro
       position: MSc 2023
       affiliation: Universidade Estadual de Campinas (Unicamp)
       country: Brazil
+      lattes: https://lattes.cnpq.br/3783591692429936
+      orcid: 0000-0002-2641-2877
     - name: João Paulo Picchetti
       position: MSc 2022
       affiliation: Universidade Estadual de Campinas (Unicamp)
       country: Brazil
+      lattes: https://lattes.cnpq.br/1916017801085456
     - name: João Guilherme Prado Barbon
       position: MSc 2021
       affiliation: Universidade Estadual de Campinas (Unicamp)
       country: Brazil
+      lattes: https://lattes.cnpq.br/5920502849461306
+      orcid: 0000-0003-0486-3156
