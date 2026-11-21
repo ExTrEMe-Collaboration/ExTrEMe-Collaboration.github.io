@@ -20,8 +20,9 @@ Last reviewed: November 2026.
 
 - [ ] **Missing identifiers.** Lattes and ORCID for Eduardo Oliveira Pinho.
 - [ ] **Presentations by non-members.** Three presentations from the legacy ExTrEMe list were given by people who are not members (marked `external: true` in `_data/talks.yml`): C. Bierlich (SQM 2019), L. Lober (Initial Stages 2021 poster) and an ENFPC 2022 talk by a former HADREX student. Keep them, or list only presentations by members?
-- [ ] **Two presentations without title**: J. Noronha at Initial Stages 2019 and at WWND 2019 (the legacy slide link for the latter is dead).
-- [ ] **Slides hosted on the legacy server.** Eight presentation links point to PDFs on `sites.ifi.unicamp.br`. If that server goes away they break: decide whether to copy them into this repository (with the authors' permission) or accept the risk.
+- [ ] **One presentation without title**: J. Noronha at WWND 2019 (not on BNL's Indico; the legacy slide link is dead; ask him). His Initial Stages 2019 title was recovered from the conference Indico.
+- [ ] **One title to confirm**: M. Hippert's Initial Stages 2019 flash talk shows the title of his slides (*Understanding p<sub>T</sub>-dependent flow fluctuations from initial geometry*); the conference programme lists it as *Linear and non-linear response of two-particle correlations to initial-geometry fluctuations*.
+- [ ] **Slides hosted on the legacy server.** Eight presentation links point to PDFs on `sites.ifi.unicamp.br` (all reachable in November 2026; 87 MB in total, of which 50 MB is a single file). If that server goes away they break. Options, with the authors' permission: attach them to a GitHub release of this repository (keeps the repository small), or deposit them on Zenodo (permanent DOI); or accept the risk.
 - [ ] **Wiki** (`/wiki/`, not linked from the menu): develop, or remove.
 - [ ] Ideas from the original plan, not started: current projects / working groups page; software and data resources page; official mailing list; governance and code of conduct; data and software citation policy; media kit (logo, canonical name, citation text).
 
