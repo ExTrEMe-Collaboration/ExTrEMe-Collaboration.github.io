@@ -1,6 +1,6 @@
 # `scripts/` — maintenance tools
 
-All require Python 3; `check_data.py` and the INSPIRE script also need PyYAML (`pip install pyyaml`).
+The Python scripts need Python 3; `check_data.py` and the INSPIRE script also need PyYAML (`pip install pyyaml`). `make_og_image.js` needs Node.js and Playwright. This folder is excluded from the published site (`exclude` in `_config.yml`).
 
 ## `check_data.py`
 
@@ -30,3 +30,13 @@ python3 scripts/update_publications_from_inspirehep.py --sync-all --dry-run     
 ```
 
 Keeps `_data/publications.yml` in sync with INSPIRE-HEP and writes new entries in the site's format (venue `Journal Vol, Page (Year)`, author initials). It only fills in missing information and replaces `Preprint`/`Under review` venues; existing fields are never removed. It rewrites the whole file, so keep comments out of `publications.yml`, and review the diff before committing.
+
+## `make_og_image.js`
+
+```bash
+bundle exec jekyll serve                                   # in one terminal
+node scripts/make_og_image.js                              # writes assets/images/og-image.jpg
+node scripts/make_og_image.js http://127.0.0.1:4000/ /tmp/preview.jpg   # custom URL / output
+```
+
+Regenerates the 1200×630 preview image used when the site is shared, by capturing the home-page hero at the fireball moment: fixed viewport, seeded `Math.random` (the same collision every run), a wait of about 1.75 s after load, saved as JPEG. Needs Playwright with Chromium (`npm install playwright && npx playwright install chromium`). Look at the result before committing it; to try a different collision, change `SEED` at the top of the script.
