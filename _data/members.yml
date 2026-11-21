@@ -108,6 +108,8 @@
       position: PhD student
       affiliation: Universidade de São Paulo (USP)
       country: Brazil
+      lattes: https://lattes.cnpq.br/1230359131969219
+      orcid: 0009-0007-7397-9087
     - name: Thiago S. Domingues
       position: PhD student
       affiliation: Universidade de São Paulo (USP)
@@ -128,7 +130,8 @@
       position: PhD student / Researcher
       affiliation: Universidade Federal de Santa Catarina (UFSC) / Bielefeld University
       country: Brazil / Germany
-      inspire: https://inspirehep.net/authors/1993437
+      lattes: https://lattes.cnpq.br/4853475854535800
+      inspire: https://inspirehep.net/authors/1869470
       orcid: 0000-0002-8867-9702
 
 - group: Alumni & Former Members
