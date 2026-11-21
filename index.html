@@ -8,10 +8,9 @@ scripts:
 {%- for group in site.data.members -%}
   {%- unless group.alumni -%}{%- assign member_count = member_count | plus: group.people.size -%}{%- endunless -%}
 {%- endfor -%}
-{%- assign paper_count = 0 -%}
-{%- for group in site.data.publications -%}
-  {%- unless group.category == "Theses" -%}{%- assign paper_count = paper_count | plus: group.items.size -%}{%- endunless -%}
-{%- endfor -%}
+{%- comment -%} "Papers" counts only the collaboration's own papers {%- endcomment -%}
+{%- assign collab_papers = site.data.publications | where: "category", "ExTrEMe Collaboration Papers" | first -%}
+{%- assign paper_count = collab_papers.items.size -%}
 {%- assign countries = site.data.institutions | map: "country" | uniq -%}
 
 <section class="hero">

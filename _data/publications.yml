@@ -95,8 +95,7 @@
     venue: Preprint
     arxiv: '2611.18290'
 - category: Selected Related Theory Papers
-  description: Papers by collaboration members supported by the FAPESP thematic project
-    2017/05685-2.
+  description: A selection of related theory papers by collaboration members.
   items:
   - year: 2018
     title: Analytical attractor and the divergence of the slow-roll expansion in relativistic
@@ -131,92 +130,6 @@
     venue: Phys. Rev. D 113, 024051 (2026)
     doi: 10.1103/PhysRevD.113.024051
     arxiv: '2510.16603'
-  - year: 2017
-    title: Homogeneous isotropization and equilibration of a strongly coupled plasma
-      with a critical point
-    authors: R. Critelli, R. Rougemont, and J. Noronha
-    venue: JHEP 12, 029 (2017)
-    doi: 10.1007/JHEP12(2017)029
-    arxiv: '1709.03131'
-  - year: 2018
-    title: η′ production in nucleus-nucleus collisions as a probe of chiral dynamics
-    authors: G. Torrieri
-    venue: Phys. Rev. C 98, 014901 (2018)
-    doi: 10.1103/PhysRevC.98.014901
-    arxiv: '1802.09011'
-  - year: 2018
-    title: Nonresistive dissipative magnetohydrodynamics from the Boltzmann equation
-      in the 14-moment approximation
-    authors: G. S. Denicol, X.-G. Huang, E. Molnár, G. M. Monteiro, H. Niemi, J. Noronha,
-      D. H. Rischke, and Q. Wang
-    venue: Phys. Rev. D 98, 076009 (2018)
-    doi: 10.1103/PhysRevD.98.076009
-    arxiv: '1804.05210'
-  - year: 2018
-    title: Causality and existence of solutions of relativistic viscous fluid dynamics
-      with gravity
-    authors: F. S. Bemfica, M. M. Disconzi, and J. Noronha
-    venue: Phys. Rev. D 98, 104064 (2018)
-    doi: 10.1103/PhysRevD.98.104064
-    arxiv: '1708.06255'
-  - year: 2019
-    title: Resummed hydrodynamic expansion for a plasma of particles interacting with
-      fields
-    authors: L. Tinti, G. Vujanovic, J. Noronha, and U. Heinz
-    venue: Phys. Rev. D 99, 016009 (2019)
-    doi: 10.1103/PhysRevD.99.016009
-    arxiv: '1808.06436'
-  - year: 2019
-    title: 'Collective effects in nuclear collisions: theory overview'
-    authors: J. Noronha
-    venue: Nucl. Phys. A 982, 78 (2019)
-    doi: 10.1016/j.nuclphysa.2018.11.017
-    arxiv: '1807.06191'
-  - year: 2019
-    title: Holographic Bjorken flow of a hot and dense fluid in the vicinity of a
-      critical point
-    authors: R. Critelli, R. Rougemont, and J. Noronha
-    venue: Phys. Rev. D 99, 066004 (2019)
-    doi: 10.1103/PhysRevD.99.066004
-    arxiv: '1805.00882'
-  - year: 2019
-    title: Hydrodynamic attractor and the fate of perturbative expansions in Gubser
-      flow
-    authors: G. S. Denicol and J. Noronha
-    venue: Phys. Rev. D 99, 116004 (2019)
-    doi: 10.1103/PhysRevD.99.116004
-    arxiv: '1804.04771'
-  - year: 2019
-    title: Nonlinear causality of general first-order relativistic viscous hydrodynamics
-    authors: F. S. Bemfica, M. M. Disconzi, and J. Noronha
-    venue: Phys. Rev. D 100, 104020 (2019)
-    doi: 10.1103/PhysRevD.100.104020
-    arxiv: '1907.12695'
-  - year: 2020
-    title: Sensitivity study with a D and B mesons modular simulation code of heavy
-      flavor R<sub>AA</sub> and azimuthal anisotropies based on beam energy, initial
-      conditions, hadronization, and suppression mechanisms
-    authors: R. Katz, C. A. G. Prado, J. Noronha-Hostler, J. Noronha, and A. A. P.
-      Suaide
-    venue: Phys. Rev. C 102, 024906 (2020)
-    doi: 10.1103/PhysRevC.102.024906
-    arxiv: '1906.10768'
-  - year: 2021
-    title: System response to the initial energy-momentum tensor in relativistic heavy-ion
-      collisions
-    authors: J. Sousa, J. Noronha, and M. Luzum
-    venue: Nucl. Phys. A 1005, 121890 (2021)
-    note: Quark Matter 2019 proceedings
-    doi: 10.1016/j.nuclphysa.2020.121890
-    arxiv: '2002.12735'
-  - year: 2021
-    title: Connecting far-from-equilibrium hydrodynamics to resummed transport coefficients
-      and attractors
-    authors: G. S. Denicol and J. Noronha
-    venue: Nucl. Phys. A 1005, 121748 (2021)
-    note: Quark Matter 2019 proceedings
-    doi: 10.1016/j.nuclphysa.2020.121748
-    arxiv: '2003.00181'
 - category: Theses
   description: PhD and MSc theses by students of the collaboration.
   items:
