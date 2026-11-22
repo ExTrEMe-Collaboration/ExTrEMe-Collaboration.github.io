@@ -13,19 +13,19 @@
   --night-muted: #a3aabb;
   --night-line: rgba(255, 255, 255, 0.1);
 
-  /* day: content */
-  --bg: #f7f6f2;
-  --surface: #ffffff;
-  --surface-2: #f1efe9;
-  --ink: #141824;
-  --muted: #535a6b;
-  --faint: #646b7c;
-  --line: #e4e1d8;
-  --line-strong: #cfcabd;
+  /* page & surface tokens (all-dark theme) */
+  --bg: #0d1018;
+  --surface: #141925;
+  --surface-2: #1a2030;
+  --ink: #e8eaf1;
+  --muted: #aeb4c3;
+  --faint: #8b92a3;
+  --line: #252c3c;
+  --line-strong: #343c4f;
 
-  --accent: #c2410c;
-  --accent-strong: #9a3412;
-  --accent-soft: #fff1e8;
+  --accent: #fb923c;
+  --accent-strong: #fdba74;
+  --accent-soft: rgba(251, 146, 60, 0.12);
   --focus: #f97316;
 
   --hot-gradient: linear-gradient(100deg, #fcd34d 0%, #fb923c 40%, #f43f5e 100%);
@@ -40,13 +40,13 @@
   --stage-obs: #0f766e;
 
   /* talk type badges: text / background */
-  --b-plenary: #be123c;    --b-plenary-bg: #ffe4e9;
-  --b-invited: #c2410c;    --b-invited-bg: #ffedd5;
-  --b-talk: #1d4ed8;       --b-talk-bg: #e0e9ff;
-  --b-flash: #92400e;      --b-flash-bg: #fef3c7;
-  --b-seminar: #0f766e;    --b-seminar-bg: #d5f5ef;
-  --b-colloquium: #15803d; --b-colloquium-bg: #dcfce7;
-  --b-poster: #7e22ce;     --b-poster-bg: #f3e8ff;
+  --b-plenary: #fda4b4;    --b-plenary-bg: rgba(244, 63, 94, 0.16);
+  --b-invited: #fdba74;    --b-invited-bg: rgba(249, 115, 22, 0.16);
+  --b-talk: #a5c0ff;       --b-talk-bg: rgba(59, 130, 246, 0.18);
+  --b-flash: #fcd34d;      --b-flash-bg: rgba(234, 179, 8, 0.16);
+  --b-seminar: #5eead4;    --b-seminar-bg: rgba(20, 184, 166, 0.16);
+  --b-colloquium: #86efac; --b-colloquium-bg: rgba(34, 197, 94, 0.15);
+  --b-poster: #d8b4fe;     --b-poster-bg: rgba(168, 85, 247, 0.18);
 
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -56,40 +56,11 @@
   --gutter: clamp(16px, 4vw, 32px);
   --radius: 16px;
   --radius-sm: 10px;
-  --shadow-1: 0 1px 2px rgba(20, 24, 36, 0.05), 0 1px 1px rgba(20, 24, 36, 0.03);
-  --shadow-2: 0 18px 40px -18px rgba(20, 24, 36, 0.25);
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-2: 0 18px 40px -18px rgba(0, 0, 0, 0.6);
   --header-h: 68px;
 
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0d1018;
-    --surface: #141925;
-    --surface-2: #1a2030;
-    --ink: #e8eaf1;
-    --muted: #aeb4c3;
-    --faint: #8b92a3;
-    --line: #252c3c;
-    --line-strong: #343c4f;
-
-    --accent: #fb923c;
-    --accent-strong: #fdba74;
-    --accent-soft: rgba(251, 146, 60, 0.12);
-
-    --b-plenary: #fda4b4;    --b-plenary-bg: rgba(244, 63, 94, 0.16);
-    --b-invited: #fdba74;    --b-invited-bg: rgba(249, 115, 22, 0.16);
-    --b-talk: #a5c0ff;       --b-talk-bg: rgba(59, 130, 246, 0.18);
-    --b-flash: #fcd34d;      --b-flash-bg: rgba(234, 179, 8, 0.16);
-    --b-seminar: #5eead4;    --b-seminar-bg: rgba(20, 184, 166, 0.16);
-    --b-colloquium: #86efac; --b-colloquium-bg: rgba(34, 197, 94, 0.15);
-    --b-poster: #d8b4fe;     --b-poster-bg: rgba(168, 85, 247, 0.18);
-
-    --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.3);
-    --shadow-2: 0 18px 40px -18px rgba(0, 0, 0, 0.6);
-    color-scheme: dark;
-  }
+  color-scheme: dark;
 }
 
 /* ---------- Base ---------- */
