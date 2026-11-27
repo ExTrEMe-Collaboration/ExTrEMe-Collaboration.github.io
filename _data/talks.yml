@@ -22,13 +22,44 @@
 #   video:     (optional) Recording.
 #   coauthors: (optional) List of co-authors as "F. M. Lastname".
 
+- date: "2026-11"
+  speaker: Osvaldo F. Neto
+  type: Seminar
+  title: "Are hybrid hydrodynamic models missing soft-pion physics?"
+  event: Research Group Meetings in Nuclear and Particle Physics
+  location: São Paulo, Brazil
+  event_url: https://www.ictp-saifr.org/nuclearparticlemeetings/
+
+- date: "2026-11"
+  speaker: Thiago S. Domingues
+  type: Seminar
+  title: "Scale vs shape: universal scalings in heavy-ion collisions"
+  event: Research Group Meetings in Nuclear and Particle Physics
+  location: São Paulo, Brazil
+  event_url: https://www.ictp-saifr.org/nuclearparticlemeetings/
+
+- date: "2026-11"
+  speaker: Matthew Luzum
+  type: Seminar
+  title: "Phenomenology of relativistic heavy-ion collisions"
+  event: Research Group Meetings in Nuclear and Particle Physics
+  location: São Paulo, Brazil
+  event_url: https://www.ictp-saifr.org/nuclearparticlemeetings/
+
 - date: "2026-09"
   speaker: Matthew Luzum
-  type: Talk
+  type: Invited talk
   title: "Direct Constraints on the Nuclear Hamiltonian from Relativistic Light-Ion Collisions"
   event: EMMI Workshop on Light-Ion Collisions 2026
   location: Heidelberg, Germany
   url: https://indico.gsi.de/event/25022/contributions/101806/
+
+- date: "2026-06"
+  speaker: Giuliano Dias
+  type: Talk
+  title: "Machine Learning em simulações de colisões de ions pesados"
+  event: XXXIII Reunião de Trabalho sobre Interações Hadrônicas (RETINHA 33)
+  location: CBPF, Rio de Janeiro, Brazil
 
 - date: "2025-12"
   speaker: Matthew Luzum
